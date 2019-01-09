@@ -1,0 +1,49 @@
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+  <table class="header" width="100%%" border="0" cellspacing="0" cellpadding="0">
+    <tr class="main">
+      <td><div class="topic">Information that will be submitted with your registration</div></td>
+    </tr>
+    <tr class="separator">
+      <td height="1"><table border="0" cellspacing="0" cellpadding="0"><tr><td></td></tr></table></td>
+    </tr>
+  </table>
+  <div class="main">
+    <p>Thank you that you would like to register your TuneUp product. The following information will be sent to us when you submit your product registration:</p>
+    <br><br>
+    <table border="0" cell-padding="0" cell-spacing="0" class="data">
+      <tr>
+       <td>TuneUp Product:</td>
+         <td>%0:s</td>
+       </tr>
+       <tr>
+       <td>Serial Number:</td>
+        <td>%1:s</td>
+       </tr>
+       <tr>
+         <td colspan="2" height="10"></td>
+       </tr>
+       <tr>
+         <td>Full Name:</td>
+         <td>%2:s</td>
+       </tr>
+       <tr>
+         <td>Company (optional):&nbsp;&nbsp;&nbsp;</td>
+         <td>%3:s</td>
+       </tr>
+       <tr>
+         <td>E-Mail Address:</td>
+         <td>%4:s</td>
+       </tr>
+       <tr>
+         <td>Country:</td>
+         <td>%5:s</td>
+       </tr>
+       <tr>
+         <td>Windows:</td>
+         <td>%6:s</td>
+       </tr>
+     </table>
+     <br><br>
+     <p>The data that you entered in the registration form can be changed or completed until you submit the product registration.</p>
+  </div>
+</body>

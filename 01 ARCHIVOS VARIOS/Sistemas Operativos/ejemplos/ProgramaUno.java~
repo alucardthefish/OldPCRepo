@@ -1,0 +1,42 @@
+
+import javax.swing.*;
+
+public class ProgramaUno
+{
+	// Obtengo la posici�n de "num" en el array "arrayNums"
+	static int getPosicion (int num, int[] arrayNums)
+	{
+		for (int i=0; i!=arrayNums.length; i++)
+			if (arrayNums[i]==num)
+				return i;
+		return -1;
+	}
+
+	public static void main(String[] args)
+	{
+		int numero=7, factorial=1;
+/*
+		for(int i=1; i<=numero; i++)
+			factorial *= i;
+*/
+/*
+		int i = 1;
+		while (i<=numero)
+		{
+			factorial *= i;
+			i++;
+		}
+
+		//System.out.println("El factorial de "+numero+" es "+factorial);
+		JOptionPane.showMessageDialog(null, "El factorial de "+numero+" es "+factorial);
+
+*/
+
+		int miArray[] = new int[] {1,2,4,8,16};
+		int resultado = getPosicion(3, miArray);
+
+		JOptionPane.showMessageDialog(null, "El resultado es "+resultado);
+
+		System.exit(0);
+	}
+}

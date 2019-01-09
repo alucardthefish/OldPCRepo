@@ -1,0 +1,54 @@
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+  <table class="header" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr class="main">
+      <td><div class="topic">Privacy Policy - Product Registration</div></td>
+    </tr>
+    <tr class="separator">
+      <td height="1"><table border="0" cellspacing="0" cellpadding="0"><tr><td></td></tr></table></td>
+    </tr>
+  </table>
+  <div class="main">
+    <p class="topic">Gathering and use of information</p>
+    <p>
+      <ul>
+        <li>We gather personal data when you submit the product registration. In addition to the information that you can see and change in the registration form like name, e-mail address etc., the following information will be submitted:<br>
+          <ul>
+            <li>The TuneUp product that you are about to register</li>
+            <li>The version number of your TuneUp product</li>
+            <li>The serial number of your TuneUp product</li>
+            <li>Your Windows version</li>
+            <li>The language of your Windows version</li>
+          </ul>
+        </li>
+        <li>We use the data gathered during the product registration to send you e-mails in the interval of about 1-2 months. These e-mails will contain information tailored to you, i.e. about product updates, new products and special offers.</li>
+        <li>When you submit the product registration, your IP address will be saved in our server logs. We will never try to correlate the IP addresses saved there with your personal information.</li>
+      </ul>
+    </p>
+    <p class="topic">Data security and protection</p>
+    <p>
+      <ul>
+        <li>We protect your personal data with internationally used security and encryption technology. Your product registration will be transmitted to our server using an encrypted connection (SSL) and will therefore be protected against abuse, manipulation and unauthorized access.</li>
+        <li>The gathered personal data is stored on a server that is protected by a firewall and located inside secured server rooms.</li>
+      </ul>
+    </p>
+    <p class="topic">Sharing of information with third parties</p>
+    <p>
+      <ul>
+        <li>In no case, we will share your personal data with third parties and we will never disclose any personal data gathered during the product registration.</li>
+      </ul>
+    </p>
+    <p class="topic">Opt-out of information e-mails</p>
+    <p>
+      <ul>
+        <li>You can opt-out of the information that we send by e-mail at any time. A link to do that is located at the bottom of every e-mail that we send to you as a result of the product registration.</li>
+        <li>You can always request us to delete the personal data that we have gathered about you.</li>
+      </ul>
+    </p>
+    <p class="topic">Questions, Ideas or Criticism</p>
+    <p>
+      <ul>
+        <li>If you have questions, ideas or criticism about the regulations in this pricacy policy, send an e-mail to: privacy@tune-up.com</li>
+      </ul>
+    </p>
+  </div>
+</body>

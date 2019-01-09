@@ -1,0 +1,568 @@
+#integrator-bg {
+  position:        absolute;
+  width:           700px;
+  height:          524px;
+  z-index:         -2;
+  background:      url(ig_background.png) no-repeat;
+}
+
+#integrator {
+  width:           700px;
+  height:          524px;
+}
+
+#integrator.launching * {
+  cursor:          progress !important;
+}
+
+/* ==================== Window caption and header buttons =================== */
+
+#integrator #header {
+  height:          100px;
+}
+
+#integrator #header .titlebar {
+  position:        absolute;
+}
+
+#integrator #header #subnav-buttons {
+  position:        absolute;
+  left:            425px;
+  top:             32px;
+}
+
+#integrator #header #subnav-rescuecenter {
+  border:          0px;
+  width:           114px;
+  height:          33px;
+/*<<
+  background:      url(#AbsoluteBaseURL#ig_subnav_buttons.png) no-repeat;
+*/
+  background:      url(ig_subnav_buttons.png) no-repeat;
+/*>>*/
+  background-position: 0px 0px;
+}
+
+#integrator #header #subnav-rescuecenter.hover {
+  background-position: 0px -33px;
+}
+
+#integrator #header #subnav-rescuecenter.hoverdown {
+  background-position: 0px -66px;
+}
+
+#integrator #header #subnav-updatewizard {
+  border:          0px;
+  width:           116px;
+  height:          33px;
+/*<<
+  background:      url(#AbsoluteBaseURL#ig_subnav_buttons.png) no-repeat;
+*/
+  background:      url(ig_subnav_buttons.png) no-repeat;
+/*>>*/
+  background-position: -114px 0px;
+}
+
+#integrator #header #subnav-updatewizard.hover {
+  background-position: -114px -33px;
+}
+
+#integrator #header #subnav-updatewizard.hoverdown {
+  background-position: -114px -66px;
+}
+
+#integrator #header #subnav-settings {
+  border:          0px;
+  width:           41px;
+  height:          33px;
+/*<<
+  background:      url(#AbsoluteBaseURL#ig_subnav_buttons.png) no-repeat;
+*/
+  background:      url(ig_subnav_buttons.png) no-repeat;
+/*>>*/
+  background-position: -230px 0px;
+}
+
+#integrator #header #subnav-settings.hover {
+  background-position: -230px -33px;
+}
+
+#integrator #header #subnav-settings.hoverdown {
+  background-position: -230px -66px;
+}
+
+#integrator #header #nc-buttons {
+  position:        absolute;
+  left:            612px;
+  top:             0px;
+  width:           84px;
+  height:          24px;
+/*<<
+  background:      url(#AbsoluteBaseURL#ig_nc_buttons.png) no-repeat;
+*/
+  background:      url(ig_nc_buttons.png) no-repeat;
+/*>>*/
+  background-position: 0px 0px;
+}
+
+#integrator #header div.hover-close {
+  background-position: 0px -24px !important;
+}
+
+#integrator #header div.hover-minimize {
+  background-position: 0px -48px !important;
+}
+
+#integrator #header div.hoverdown-close {
+  background-position: 0px -72px !important;
+}
+
+#integrator #header div.hoverdown-minimize {
+  background-position: 0px -96px !important;
+}
+
+#integrator #header #nc-minimize {
+  border:          0px;
+  width:           32px;
+  height:          20px;
+  background:      none;
+}
+
+#integrator #header #nc-close {
+  border:          0px;
+  width:           45px;
+  height:          20px;
+  background:      none;
+}
+
+/* ================================ Categories ============================== */
+
+#integrator #categories {
+  float:           left;
+  width:           175px;
+  height:          416px;
+  padding:         8px 20px 0px 14px;
+}
+
+#integrator .category {
+  font-family:     Tahoma;
+  font-size:       13px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       14px;
+</if>*/
+/*>>*/
+  padding:         8px 8px 8px 8px;
+  zoom:            1;
+  overflow:        hidden;
+  margin-bottom:   8px;
+}
+
+#integrator .category a {
+  display:         block;
+  padding:         0px 2px 0px 2px;
+  color:           #000000;
+  text-decoration: none;
+  cursor:          default;
+}
+
+/* =============================== Content pages ============================ */
+
+#integrator #pages {
+  float:           left;
+  width:           487px;
+  height:          424px;
+  padding:         0px 4px 0px 0px;
+}
+
+#integrator .page {
+  display:         none;
+}
+
+#integrator #pages .active {
+  display:         block;
+}
+
+#integrator .page h1 {
+  font-family:     Tahoma;
+  font-size:       19px;
+  color:           #2261B8;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       20px;
+  color:           #1C51A8;
+</if>*/
+/*>>*/
+  font-weight:     normal;
+  height:          28px;
+  margin:          20px 0px 10px 0px;
+}
+
+#integrator .page h1.title {
+  margin-top:      0px;
+}
+
+#integrator .page h2.sub {
+  font-family:     Tahoma;
+  font-size:       14px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       14px;
+</if>*/
+/*>>*/
+  font-weight:     normal;
+  color:           #2261B8;
+  margin:          15px 0px 15px 0px;
+  padding-bottom:  3px;
+  border-bottom:   1px solid #E0E0E0;
+}
+
+#integrator .page .contents {
+  position:        relative;
+  padding:         0px 12px 0px 0px;
+  height:          365px;
+  overflow-x:      hidden;
+  overflow-y:      hidden;
+}
+
+/* =========================== Normal task buttons ========================== */
+
+.task-button {
+  font-family:     Tahoma;
+  font-size:       12px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       12px;
+</if>*/
+/*>>*/
+  margin:          0px 0px 8px 0px;
+  border-collapse: collapse;
+  width:           100%;
+}
+
+.task-button td {
+  padding:         4px 4px 8px 4px;
+  vertical-align:  top;
+}
+
+.task-button td.image {
+  width:           1px;
+  padding-right:   10px;
+}
+
+.task-button a {
+  text-decoration: none;
+}
+
+.task-button a:hover {
+  text-decoration: underline;
+}
+
+.task-button h2 {
+  font-size:       15px;
+  margin:          1px 0px 4px 0px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-size:       16px;
+  margin:          0px 0px 2px 0px;
+</if>*/
+/*>>*/
+  font-weight:     normal;
+}
+
+.task-button h2 a {
+  color:           #006E12;
+}
+
+.task-button h2 a:hover {
+  color:           #00AE1D;
+}
+
+.task-button samp {
+  font-family:     Tahoma;
+  font-size:       12px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       12px;
+</if>*/
+/*>>*/
+  white-space:     nowrap;
+  line-height:     17px;
+}
+
+.task-button samp.wrap {
+  white-space:     normal;
+}
+
+.task-button .separator {
+  display:         inline-block;
+  border-right:    1px solid #C0C0C0;
+  margin-left:     8px;
+  margin-right:    6px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  line-height:     14px;
+</if>*/
+/*>>*/
+}
+
+/* ========================== Cleanup task buttons ========================== */
+
+#page-gainspace .combobox-spacer {
+  font-family:     Tahoma;
+  font-size:       11px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       12px;
+</if>*/
+/*>>*/
+  height:          48px;
+  background:      url(gds_combobox.png) no-repeat;
+  white-space:     nowrap;
+  font-weight:     normal;
+  text-decoration: none;
+  vertical-align:  middle;
+  line-height:     48px;
+  padding-left:	   10px;
+}
+
+#page-gainspace .button-bg {
+  position:        absolute;
+  padding-top:     48px;
+  z-index:         -2;
+}
+
+#page-gainspace .button-bg div {
+  width:           475px;
+  height:          185px;
+  background:      url(gradient_bg.gif) repeat-y top right;
+  border-top:      1px solid #E0E0E0;
+  border-bottom:   1px solid #E0E0E0;
+}
+
+#page-gainspace .button-fg {
+  height:          185px;
+  margin-bottom:   25px;
+}
+
+#page-gainspace .table-caption {
+  font-family:     Tahoma;
+  font-size:       13px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       14px;
+</if>*/
+/*>>*/
+  font-weight:     normal;
+  color:           #2261B8;
+  margin:          14px 10px 10px 14px;
+}
+
+#page-gainspace .buttons {
+  margin:          10px 10px 0px 10px;
+  padding:         0px;
+  table-layout:    fixed;
+  border-collapse: collapse;
+}
+
+#page-gainspace .buttons td {
+  padding:         0px 4px 0px 4px;
+  vertical-align:  top;
+}
+
+.cleanup-button {
+  font-family:     Tahoma;
+  font-size:       12px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       12px;
+</if>*/
+/*>>*/
+  color:           #505050;
+  margin:          0px 0px 8px 0px;
+  border-collapse: collapse;
+  width:           100%;
+}
+
+.cleanup-button td {
+  padding:         4px 4px 8px 4px !important;
+  vertical-align:  top;
+}
+
+.cleanup-button td.image {
+  width:           1px;
+  padding-right:   6px;
+}
+
+.cleanup-button a {
+  text-decoration: none;
+}
+
+.cleanup-button a:hover {
+  text-decoration: underline;
+}
+
+.cleanup-button h2 {
+  font-size:       12px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-size:       13px;
+</if>*/
+/*>>*/
+  font-weight:     normal;
+  margin:          0px 10px 4px 0px;
+}
+
+.cleanup-button h2 a {
+  color:           #006E12;
+}
+
+.cleanup-button h2 a:hover {
+  color:           #00AE1D;
+}
+
+.cleanup-button samp {
+  font-family:     Tahoma;
+  font-size:       12px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       12px;
+</if>*/
+/*>>*/
+  white-space:     nowrap;
+  line-height:     17px;
+}
+
+.cleanup-button samp.wrap {
+  white-space:     normal;
+}
+
+.cleanup-button .separator {
+  display:         inline-block;
+  border-right:    1px solid #C0C0C0;
+  margin-left:     8px;
+  margin-right:    6px;
+  line-height:     14px;
+}
+
+/* ============================ "See also" links ============================ */
+
+.see-also {
+  position:        absolute;
+  left:            0px;
+  bottom:          0px;
+  border-collapse: collapse;
+}
+
+.see-also td {
+  font-family:     Tahoma;
+  font-size:       12px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       12px;
+</if>*/
+/*>>*/
+  padding:         0px 0px 1px 0px;
+  vertical-align:  top;
+}
+
+.see-also td.caption {
+  padding-top:     1px;
+  padding-right:   10px;
+  color:           #505050;
+  white-space:     nowrap;
+  width:           1%;
+}
+
+.see-also a {
+  display:         block;
+  width:           auto;
+  float:           left;
+  margin:          0px 10px 2px 0px;
+  text-decoration: none;
+  white-space:     nowrap;
+}
+
+.see-also a:hover {
+  text-decoration: underline;
+}
+
+.see-also img {
+  width:           16px;
+  height:          16px;
+  vertical-align:  middle;
+  padding-right:   4px;
+}
+
+/* ============================== Page contents ============================= */
+
+table.tasks {
+  font-family:     Tahoma;
+  font-size:       11px;
+/*<<
+<if "#UseVistaUIScheme# = 1">
+  font-family:     Segoe UI, Tahoma;
+  font-size:       12px;
+</if>*/
+/*>>*/
+  width:           100%;
+  margin:          0px 0px 10px 0px;
+  padding:         0px;
+  border-collapse: collapse;
+  background:      url(gradient_bg.gif) repeat-y top right;
+}
+
+table.tasks thead {
+  background:      #F8F8F8;
+}
+
+table.tasks th {
+  border-top:      1px solid #E0E0E0;
+  border-bottom:   1px solid #E0E0E0;
+  font-size:       13px;
+  font-weight:     normal;
+  padding:         4px 8px 4px 8px;
+  color:           #1A4A8E;
+}
+
+table.tasks td {
+  padding:         4px 8px 4px 4px;
+  vertical-align:  top;
+  background:      none;
+}
+
+table.tasks td.status {
+  padding:         6px 1px 0px 8px;
+}
+
+table.tasks .vspacer {
+  height:          5px;
+}
+
+table.tasks tfoot td {
+  padding:         0px;
+  border-bottom:   1px solid #E0E0E0;
+}
+
+.gds-loading {
+  display:         inline-block;
+  width:           0px;
+  height:          16px;
+  vertical-align:  middle;
+  background:      none;
+}
+
+.gds-loading-visible {
+  width:           22px !important;
+  background:      url(loading.gif) no-repeat  !important;
+}

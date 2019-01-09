@@ -1,0 +1,9 @@
+!SESSION 2008-09-30 20:01:11.468 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.6.0_07
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jdt.ui 2 0 2008-09-30 20:11:10.703
+!MESSAGE The 'org.eclipse.jdt.ui.JavaTypeCompletionProposalComputer' proposal computer from the 'org.eclipse.jdt.ui' plug-in did not complete normally. The extension took too long to return from the 'computeContextInformation()' operation.

@@ -1,0 +1,58 @@
+body             {
+                   /*CSS:uieTextParagraph*/
+                   margin: 0 30 0 0;
+                 }
+b                {
+                   color: #002C2C2C
+                 }
+p                {
+                   /*CSS:uieTextParagraph*/
+                   margin: 0 0 8 0;
+                 }
+.topic           {
+                   /*CSS:uieHeading1*/
+                   margin: 25 0 8 0;
+                 }
+.cap             {
+                   margin-top: -3px;
+                   margin-bottom: 2;
+                 }
+.task            {
+                   text-decoration: none;
+                 }
+.task:hover      {
+                   text-decoration: underline;
+                 }
+.desc            {
+                 }
+.working         {
+                   font-weight: normal;
+                   color: #205090;
+                   margin-left: 15;
+                 }
+.clickme         {
+                   font-weight: normal;
+                   color: #0000FF;
+                   margin-left: 15;
+                 }
+.err             {
+                   font-weight: bold;
+                   color: #FF0000;
+                   margin-left: 15;
+                 }
+.noerr           {
+                   font-weight: bold;
+                   color: #00A000;
+                   margin-left: 15;
+                 }
+.nochk           {
+                   font-weight: bold;
+                   color: #F8AA00;
+                   margin-left: 15;
+                 }
+a                {
+                   /*CSS:uieLinkNormal*/
+                 }
+a:hover          {
+                   /*CSS:uieLinkHover*/
+                 }

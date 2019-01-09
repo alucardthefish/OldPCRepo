@@ -1,0 +1,23 @@
+[VersionInfo]
+TUAppNameShort=TuneUp Utilities
+TUAppNameLong=TuneUp Utilities 2008
+TULanguage=EN
+TUBuild=7.0.8002
+TUAppMode=291
+TUAppString=TU2008
+TUAppID=tu2008
+TUAID=
+AppIDNo=5
+TUWebsite=www.tune-up.com
+5CharSerial=1
+[Settings]
+WebsiteManufacturer=www.tune-up.com
+Global=Utilities
+Version=Utilities\7.0
+HelpFile=Main
+WebsiteSupport=http://www.tune-up.com/support/
+[Options]
+LastType=2
+[MainServers]
+Server1=http://www.tuneup.de/UpdateWizard/TU2008
+Rating1=1

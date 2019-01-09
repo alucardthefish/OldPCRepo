@@ -1,0 +1,385 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <link rel="stylesheet" type="text/css" href="ie_base.css">
+  <link rel="stylesheet" type="text/css" href="ie_integrator.css">
+<!--
+  <script language="JavaScript" type="text/javascript">
+    var dtStart = (new Date()).getTime();
+  </script>
+-->
+  <script language="JavaScript" type="text/javascript" src="ie_jquery.js"></script>
+  <script language="JavaScript" type="text/javascript" src="ie_jquery.easing.js"></script>
+  <script language="JavaScript" type="text/javascript" src="ie_jquery.dimensions.js"></script>
+  <script language="JavaScript" type="text/javascript" src="ie_jquery.ifixpng.js"></script>
+  <script language="JavaScript" type="text/javascript" src="ie_jquery.layerbutton.js"></script>
+  <script language="JavaScript" type="text/javascript" src="ie_base.js"></script>
+  <script language="JavaScript" type="text/javascript" src="ie_integrator.js"></script>
+</head>
+<body onload="alert('#onload')">
+  <div id="integrator-bg"></div>
+  <div id="integrator">
+    <div id="header">
+      <div class="titlebar" style="left:   0px; top:  0px; width: 380px; height: 72px"></div>
+      <div class="titlebar" style="left: 380px; top:  0px; width: 316px; height: 65px"></div>
+      <div class="titlebar" style="left:   0px; top: 72px; width: 120px; height:  5px"></div>
+      <div class="titlebar" style="left:   0px; top: 77px; width:  60px; height:  5px"></div>
+      <div class="titlebar" style="left:   0px; top: 82px; width:  35px; height:  5px"></div>
+      <div class="titlebar" style="left:   0px; top: 87px; width:  15px; height:  5px"></div>
+      <div id="nc-buttons"><button id="nc-minimize"></button><button id="nc-close"></button></div>
+      <div id="subnav-buttons"><button id="subnav-rescuecenter"></button><button id="subnav-updatewizard"></button><button id="subnav-settings"></button></div>
+    </div>
+    <div id="client">
+      <div id="categories">
+        <div class="category active" id="category-optimize"     ><a href="#">Increase performance</a></div>
+        <div class="category"        id="category-gainspace"    ><a href="#">Free up disk space</a></div>
+        <div class="category"        id="category-maintain"     ><a href="#">Maintain Windows</a></div>
+        <div class="category"        id="category-solveproblems"><a href="#">Solve problems</a></div>
+        <div class="category"        id="category-tweak"        ><a href="#">Customize Windows</a></div>
+        <div class="category"        id="category-tools"        ><a href="#">Additional tools</a></div>
+      </div>
+      <div id="pages">
+        <div class="page active" id="page-optimize">
+          <h1 class="title">Increase performance</h1>
+          <div class="contents">
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/drive-defrag.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:DriveDefrag.exe">TuneUp Drive Defrag</a></h2>
+                  <samp><a href="#">Accelerate start up of Windows and applications</a></samp>
+                  <samp><a href="#:/view=schedule">Schedule automatic defragmentation</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/startup-manager.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:StartUpManager.exe">TuneUp StartUp Manager</a></h2>
+                  <samp><a href="#">Prevent automatic start of unwanted applications</a></samp>
+                  <samp><a href="#:/view=add">Schedule automatic start of applications</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/system-optimizer.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:SystemOptimizer.exe">TuneUp System Optimizer</a></h2>
+                  <samp><a href="#:/view=optimize-internet">Accelerate surfing and download speeds</a></samp>
+                  <samp><a href="#:/view=optimize-system">Improve system performance</a></samp>
+                  <samp><a href="#:/view=system-advisor">Display tips for system configuration</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/registry-defrag.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:RegistryDefrag.exe">TuneUp Registry Defrag</a></h2>
+                  <samp><a href="#">Reduce size of registry</a></samp>
+              <if "#IsVistaOrHigher# = 0">
+                  <samp><a href="#">Repair registry errors</a></samp>
+              </if>
+                </td>
+              </tr>
+            </table>
+            <if "#IsVistaOrHigher# = 0">
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/memory-optimizer.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:MemOptimizer.exe">TuneUp Memory Optimizer</a></h2>
+                  <samp><a href="#">Free up system memory</a></samp>
+                </td>
+              </tr>
+            </table>
+            <else>
+            <table class="see-also">
+              <tr>
+                <td class="caption">See also:</td>
+                <td>
+                  <a href="#launch:OneClick.exe"><img src="modules/one-click-maintenance-16x16.png">1-Click Maintenance</a>
+                </td>
+              </tr>
+            </table>
+            </if>
+          </div>
+        </div>
+        <div class="page"        id="page-gainspace">
+          <h1 class="title">Free up disk space</h1>
+          <div class="button-bg">
+            <div>
+            </div>
+          </div>
+          <div class="contents">
+            <div class="combobox-spacer">Clean up:</div>
+            <div class="button-fg">
+              <div class="table-caption">Suggested items for cleanup:</div>
+              <table class="buttons">
+                <col width="50%"><!--<col width="50%">-->
+                <tr>
+                  <td>
+                    <table class="cleanup-button">
+                      <tr>
+                        <td class="image"><a href="#" tabindex="-1"><img src="modules/gds-unneededfiles.png" width="48" height="48" alt=""></a></td>
+                        <td>
+                          <h2><a href="#gds:unneededfiles">Unnecessary files and backups <span id="gds-unneededfiles-count"></span></a></h2>
+                          <span class="cleanup-usage"><span class="gds-loading unneededfiles"></span><span id="gds-unneededfiles-usage"></span></span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table class="cleanup-button">
+                      <tr>
+                        <td class="image"><a href="#" tabindex="-1"><img src="modules/windows-functions.png" width="48" height="48" alt=""></a></td>
+                        <td>
+                          <h2><a href="#gds:windowsfunctions">Windows functions <span id="gds-windowsfunctions-count"></span></a></h2>
+                          <span class="cleanup-usage"><span class="gds-loading windowsfunctions"></span><span id="gds-windowsfunctions-usage"></span></span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>                  
+                </tr>
+                <tr>
+                </tr>
+              </table>
+            </div>
+            <div class="table-caption">Organize files and folders</div>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/disk-space-explorer.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:DiskExplorer.exe">TuneUp Disk Space Explorer</a></h2>
+                  <samp><a href="#">Display memory usage of disks</a></samp>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="page"        id="page-maintain">
+          <h1 class="title">Automatic Windows maintenance</h1>
+          <div class="contents">
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/one-click-maintenance.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:OneClick.exe">TuneUp 1-Click Maintenance</a></h2>
+                  <samp><a href="#">Perform complete Windows maintenance</a></samp>
+                  <samp><a href="#:/view=schedule">Schedule automatic maintenance</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="tasks">
+              <col style="width: 1px"><col><col class="right">
+              <thead>
+                <tr>
+                  <th colspan="2">Maintenance tasks</th>
+                  <th class="right">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="vspacer"><td colspan="3"></td></tr>
+                <tr>
+                  <td class="status"><img src="task_status_ok.png"></td>
+                  <td>Registry cleanup</td>
+                  <td><span id="ocm-fixed-regproblems">239 problems have now been resolved</span></td>
+                </tr>
+                <tr>
+                  <td class="status"><img src="task_status_ok.png"></td>
+                  <td>Deleting temporary files</td>
+                  <td><span id="ocm-gained-diskspace">4,192 MB have now been freed up</span></td>
+                </tr>
+                <tr>
+                  <td class="status"><img src="task_status_ok.png"></td>
+                  <td>Defragmenting hard disks</td>
+                  <td><span id="ocm-last-defrag">Last performed on 10/12/2007</span></td>
+                </tr>
+                <tr>
+                  <td class="status"><img src="task_status_ok.png"></td>
+                  <td>Automatic maintenance</td>
+                  <td><span id="ocm-scheduled">Every Friday at 4:00 PM</span></td>
+                </tr>
+                <tr class="vspacer"><td colspan="3"></td></tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="3"></td>
+                </tr>
+              </tfoot>
+            </table>
+            <h1>Manual Windows maintenance</h1>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/registry-cleaner.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:RegistryCleaner.exe">TuneUp Registry Cleaner</a></h2>
+                  <samp><a href="#">Correct registry errors</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="see-also">
+              <tr>
+                <td class="caption">See also:</td>
+                <td>
+                  <a href="#launch:DiskDoctor.exe"><img src="modules/disk-doctor-16x16.png">Disk Doctor</a> <a href="#launch:DriveDefrag.exe"><img src="modules/drive-defrag-16x16.png">Drive Defrag</a> <a href="#launch:RegistryDefrag.exe"><img src="modules/registry-defrag-16x16.png">Registry Defrag</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="page"        id="page-solveproblems">
+          <h1 class="title">Solve problems</h1>
+          <div class="contents">
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/disk-doctor.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:DiskDoctor.exe">TuneUp Disk Doctor</a></h2>
+                  <samp><a href="#">Check the file system and prevent data loss</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/repair-wizard.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:RepairWizard.exe">TuneUp Repair Wizard</a></h2>
+                  <samp><a href="#">Fix computer and display problems</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/undelete.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:Undelete.exe">TuneUp Undelete</a></h2>
+                  <samp><a href="#">Restore accidentally deleted files</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="see-also">
+              <tr>
+                <td class="caption">See also:</td>
+                <td>
+                  <a href="#launch:RescueCenter.exe"><img src="modules/rescue-center-16x16.png">Rescue Center</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="page"        id="page-tweak">
+          <h1 class="title">Customize Windows</h1>
+          <div class="contents">
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/system-control.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:SystemControl.exe">TuneUp System Control</a></h2>
+                  <samp><a href="#:/view=settings">Change Windows and program settings</a></samp>
+                  <samp><a href="#:/view=display">Adjust system appearance</a></samp>
+                  <samp><a href="#:/view=startmenu">Adjust the Start menu and taskbar</a></samp>
+                  <samp><a href="#:/view=internet">Adjust Internet settings</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/styler.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:WinStyler.exe">TuneUp Styler</a></h2>
+                  <samp><a href="#:/view=icons">Replace icons</a></samp>
+                  <samp><a href="#:/view=styles">Customize the appearance of windows</a></samp>
+                  <samp><a href="#:/view=bootscreen">Change boot screen</a></samp>
+                  <samp><a href="#:/view=logonscreen">Change User Logon screen</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="see-also">
+              <tr>
+                <td class="caption">See also:</td>
+                <td>
+                  <a href="#launch:StartUpManager.exe"><img src="modules/startup-manager-16x16.png">StartUp Manager </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="page"        id="page-tools">
+          <h1 class="title">Additional tools</h1>
+          <div class="contents">
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/process-manager.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:ProcessManager.exe">TuneUp Process Manager</a></h2>
+                  <samp><a href="#">Manage running processes</a></samp>
+                  <samp><a href="#:/view=open-files">Find open files</a></samp>
+                  <samp><a href="#:/view=performance">Monitor system resource usage</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/registry-editor.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:RegistryEditor.exe">TuneUp Registry Editor</a></h2>
+                  <samp><a href="#:/view=search">Browse the registry</a></samp>
+                  <samp><a href="#">Edit the registry</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/shredder.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:Shredder.exe">TuneUp Shredder</a></h2>
+                  <samp><a href="#:/view=wipe-files">Delete files permanently</a></samp>
+                  <samp><a href="#:/view=wipe-folders">Delete folders permanently</a></samp>
+                  <samp><a href="#:/view=wipe-recycle-bin">Delete Recycle Bin contents permanently</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/system-information.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:SystemInformation.exe">TuneUp System Information</a></h2>
+                  <samp><a href="#">Display software and hardware configuration</a></samp>
+                  <samp><a href="#:/view=performance">Display system performance information</a></samp>
+                </td>
+              </tr>
+            </table>
+            <table class="task-button">
+              <tr>
+                <td class="image"><a href="#" tabindex="-1"><img src="modules/uninstall-manager.png" width="48" height="48" alt=""></a></td>
+                <td>
+                  <h2><a href="#launch:UninstallManager.exe">TuneUp Uninstall Manager</a></h2>
+                  <samp><a href="#">Uninstall programs</a></samp>
+                  <samp><a href="#">Display installed programs</a></samp>
+                </td>
+              </tr>
+            </table>
+            </div>
+        </div>
+      </div>
+    </div>
+    <if "#IsBetaVersion# = 1">
+      <div id="beta" style="position: absolute; left: 595px; top: 455px"><img src="beta.png" width="92" height="56"></div>
+    </if>
+  </div>
+<!--
+<script language="JavaScript" type="text/javascript">
+  var dtBefore = (new Date()).getTime();
+  jQuery.ready();
+  var dtAfter = (new Date()).getTime();
+  $('#integrator').append('Page rendering=' + (dtBefore - dtStart) + ', jQuery processing=' + (dtAfter - dtBefore));
+</script>
+-->
+</body>
+</html>

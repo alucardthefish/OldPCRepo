@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>TuneUp StartUp Manager</title>
+  <style>
+  body {
+  	font: 11px "Lucida Grande", Helvetica, sans-serif;
+  	color: #414141;
+  	background: #FFFFFF;
+  }
+    
+  h1 {
+    font-size: 21px;
+    font-weight: normal;
+    color: #FF9722;
+  }
+  
+  h2 {
+    font-size: 13px;
+    font-weight: normal;
+    margin: 10px 0px 16px 0px;
+  }
+  
+  .topic {
+    font-size: 16px;
+    color: #235ed6;
+    font-weight: normal;
+    padding-bottom: 5px;
+  }
+  
+  .innerframe {
+    padding: 10px 10px 13px 10px;
+    margin: 0px;
+    background-color: #eef5ff;
+    border: 1px solid #ffffff;
+  }
+  form {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  table {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+  
+  #page {
+  	margin: 0px auto;
+  	text-align: left;
+  	width: 600px;
+  }
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1>TuneUp StartUp Manager – Report Program</h1>
+    <div style="font-size: 0px; height: 6px; background: #E4EFFF url(././tfi_edge_tm.gif) repeat-x;">
+      <img style="float: left"src="././tfi_edge_tl.gif" width="6" height="6">
+      <img align="right"      src="././tfi_edge_tr.gif" width="6" height="6">
+    </div>
+    <div style="background: #E4EFFF url(././tfi_bg.gif) repeat-x; border-left: 1px solid #D8DDE8; border-right: 1px solid #D8DDE8">
+      <div style="padding: 1px 15px 10px 15px;">    
+        <h2>Thank you for taking the time to report an unrecognized program. Please make sure that you are connected to the Internet, and then click the Submit button to submit the following information to our server.</h2>
+        <form name="tfi_ur" method="post" action="https://secure.tune-up.com/en/services/file-identification/">
+        <div class="innerframe">
+          <input type="hidden" name="action"                    value="user_report">
+          <input type="hidden" name="check"                     value="[value:check]">
+          <input type="hidden" name="file_name"                 value="[value:file_name]">
+          <input type="hidden" name="parameters"                value="[value:file_parameters]">
+          <input type="hidden" name="file_path"                 value="[value:file_path]">
+          <input type="hidden" name="version_info_description"  value="[value:version_info_description]">
+          <input type="hidden" name="version_info_product_name" value="[value:version_info_product_name]">
+          <input type="hidden" name="version_info_company_name" value="[value:version_info_company_name]">
+          <input type="hidden" name="startup_location"          value="[value:startup_location]">
+          <input type="hidden" name="running"                   value="[value:running]">
+          <table border="0" cellspacing="0" cellpadding="2">
+            <tr>
+              <td colspan="2"><div class="topic">Report details:</div></td>
+            </tr>
+            <tr>
+              <td>
+                File name:
+              </td>
+              <td>
+                [display:file_name]
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Arguments:
+              </td>
+              <td>
+                [display:file_parameters]
+              </td>
+            </tr>
+            <tr>
+              <td>
+                File path: 
+              </td>
+              <td>
+                [display:file_path]
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Start location: 
+              </td>
+              <td>
+                [display:startup_location]
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Currently running: 
+              </td>
+              <td>
+                [display:running]
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><div class="topic" style="margin-top: 15px">Information from manufacturer:</div></td>
+            </tr>
+            <tr>
+              <td>
+                Description:
+              </td>
+              <td>
+                [display:version_info_description]
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Product name:
+              </td>
+              <td>
+                [display:version_info_product_name]
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Manufacturer name:&nbsp;&nbsp;
+              </td>
+              <td>
+                [display:version_info_company_name]
+              </td>
+            </tr>
+          </table>
+        </div>
+      	<div align="right" style="padding-top: 10px">
+         	<input src="././tfi_submit.jpg" style="border:0;" type="image" name="submit">
+        </div>
+        </form>
+      </div>
+    </div>
+    <div style="font-size: 0px; height: 6px; background: #E4EFFF url(././tfi_edge_bm.gif) repeat-x">
+      <img style="float: left"src="././tfi_edge_bl.gif" width="6" height="6">
+      <img align="right"      src="././tfi_edge_br.gif" width="6" height="6">
+    </div>
+  </div>
+</body>
+    

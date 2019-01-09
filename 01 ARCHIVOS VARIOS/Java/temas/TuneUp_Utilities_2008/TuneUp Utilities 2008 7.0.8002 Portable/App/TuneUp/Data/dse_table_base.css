@@ -1,0 +1,378 @@
+a:link { 
+	text-decoration:none; 
+	color: #000000;
+}
+
+a:hover { 
+  /*CSS:uieLinkHover*/
+}
+
+.GrosseTabelle {
+  width: 100%;
+}
+
+.db-table-footer-m a:link { 
+  /*CSS:uieLinkNormal*/
+	text-decoration: underline;
+}
+
+.grafik { 
+  text-align:     center;
+  vertical-align: middle;
+  padding-top:    20px;
+}
+  
+
+body {
+  /*CSS:uieTextParagraph*/
+  background-color: #FFFFFF;
+  margin-left: 20px;
+  text-align: center;
+  margin-right: 20px;
+  margin-top: 0px;
+}
+
+.db-zelle-details {
+  text-align: left;
+  padding-top: 20px;
+	vertical-align: top;
+}
+
+.db-zelle-spacer {
+	width: 20px;
+}
+
+.db-table {
+  width: 100%;
+  border: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.db-zelle-mini {
+	vertical-align: top;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.db-table-header-tl  {
+  background-image: url([CurAppDataDir]\box_header_top_left.jpg);
+  background-repeat: no-repeat;
+  font-size: 1px;
+  width: 7px;
+  height: 24px;
+}
+.db-table-header-tm  {
+  background-image: url([CurAppDataDir]\box_header_top_middle.jpg);
+  height: 24px;
+  padding-left: 2px;
+  padding-top: 4px;
+  padding-bottom: 1px;
+}
+
+.db-table-header-tr  {
+  background-image: url([CurAppDataDir]\box_header_top_right.jpg);
+  background-repeat: no-repeat;
+  font-size: 1px;
+  width: 7px;
+  height: 24px;
+}
+
+.db-table-header-bl  {
+  background-image: url([CurAppDataDir]\box_header_bottom_left.jpg);
+  background-repeat: no-repeat;
+  font-size: 1px;
+  width: 7px;
+  height: 22px;
+}
+.db-table-header-bm  {
+  background-image: url([CurAppDataDir]\box_header_bottom_middle.jpg);
+  height: 22px;   
+  padding-left: 2px;
+}
+
+.db-table-header-bm-a  {
+  background-image: url([CurAppDataDir]\box_header_bottom_middle.jpg);
+  height: 22px;   
+  width: 60px;
+}
+
+
+.db-table-header-bm-l  {
+  background-image: url([CurAppDataDir]\box_header_bottom_middle.jpg);
+  width: 10px;   
+}
+
+.db-table-header-br  {
+  background-image: url([CurAppDataDir]\box_header_bottom_right.jpg);
+  width: 7px;
+  height: 22px;
+}
+.db-table-header-seperator {
+	background-image: url([CurAppDataDir]\box_header_topic_separator.png);
+}
+.db-table-header-headline {
+  font-weight: bold; 
+  text-align: right; 
+  font-size: 11.34px;
+  color: #415881;
+  background-image: url([CurAppDataDir]\box_header_topic_separator.png);
+  background-repeat:no-repeat;
+  padding-right: 5px;  
+  padding-left: 10px;  
+}
+
+.db-table-header-headline-m {
+  font-weight: bold; 
+  text-align: center; 
+  font-size: 11.34px;
+  color: #415881;
+  background-image: url([CurAppDataDir]\box_header_topic_separator.png);
+  background-repeat:no-repeat;
+  padding-right: 5px;  
+  padding-left: 10px;  
+}
+.db-table-header-headline-l {
+  font-weight: bold; 
+  text-align: left;   
+  font-size: 11.34px;
+  color: #415881;
+  background-image: url([CurAppDataDir]\box_header_topic_separator.png);
+  background-repeat:no-repeat;
+  padding-right: 10px;  
+  padding-left: 10px;  
+}
+
+.db-table-header-topic {
+  font-weight: bold; 
+  text-align: left; 
+  font-size: 12px;
+  color: #0a2656; 
+}
+
+.db-table-body-l  {
+  background-image: url([CurAppDataDir]\box_border_left.png);
+  font-size: 1px;
+  width: 1px;
+  height: 25px;
+}
+
+.db-table-body-m  {
+  background-color: #FFFFFF;
+  padding-left: 0px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  vertical-align: middle;
+  height: 25px;
+}
+
+.db-table-body-m-leg {
+  background-color: #FFFFFF;
+  padding-left: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  vertical-align: middle;
+  height: 25px;
+}
+
+.db-table-body-m-c {
+	width: 250px;
+  padding-left:   10px;
+  padding-right:  10px;  
+  height: 25px;
+}
+
+.db-table-body-m-l  {
+  background-color: #FFFFFF;  
+  
+}
+
+.db-table-body-r  {
+  background-image: url([CurAppDataDir]\box_border_right.png);
+  font-size: 1px;
+  width: 2px;
+  height: 25px;
+}
+
+.db-table-body-filesize-percent {
+  text-align: right; 
+  padding-left: 0px;
+  padding-right: 5px;
+  color: #2D5FAA;
+}
+
+.db-table-body-filesize-progress {
+  text-align: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.db-table-body-filesize-numeric {
+  text-align: right; 
+  padding-left: 8px;
+  color: #D75935;
+}
+
+.db-table-body-liste-links  {
+  padding-left: 10px;
+  text-align: left;  
+}
+
+.db-table-body-liste-rechts  {
+  padding-left: 10px;
+  padding-right: 5px;
+  text-align: right; 
+}
+
+.db-table-body-m-blue-line {
+  background-image: none;
+  background-color: #e8f1ff;
+  padding-left: 0px;
+  vertical-align: middle;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  height: 25px;
+}
+
+.db-table-body-m-blue-line-fader {
+  padding-left: 0px;
+  background-image: url([CurAppDataDir]\list_blue_line_left.png);
+  background-repeat: repeat-y;
+  background-color: #e8f1ff;
+  vertical-align: middle;
+  padding-bottom: 3px;
+  padding-top: 3px;  
+  height: 25px;
+}
+
+.db-table-body-m-blue-line-fader-leg {
+  padding-left: 8px;
+  background-image: url([CurAppDataDir]\list_blue_line_left.png);
+  background-repeat: repeat-y;
+  background-color: #e8f1ff;
+  vertical-align: middle;
+  padding-bottom: 3px;
+  padding-top: 3px;  
+  height: 25px;
+}
+
+.db-table-footer-l  {
+  background-image: url([CurAppDataDir]\box_edge_bottom_left.png);
+  background-color: #cc0000;
+  width: 7px;
+  height: 56px;
+}
+
+.db-table-footer-m  {
+  background-image: url([CurAppDataDir]\box_bottom_middle.png);
+  text-align: right;
+  background-color: #cc0000;
+  height: 56px;
+  color: #0000FF;
+  text-decoration:underline;
+  padding-right: 5px;
+}
+
+.db-table-footer-m-nol  {
+  background-image: url([CurAppDataDir]\box_bottom_middle.png);
+  text-align: right;
+  background-color: #cc0000;
+  height: 56px;
+  color: #0000FF;
+  padding-right: 5px;
+}
+
+
+.db-table-footer-m-l  {
+  background-image: url([CurAppDataDir]\box_bottom_middle.png);
+  text-align: left;
+  background-color: #cc0000;
+  height: 56px;
+  padding-right: 5px;
+}
+
+.db-table-footer-r  {
+  background-image: url([CurAppDataDir]\box_edge_bottom_right.png);
+  background-color: #cc0000;
+  width: 7px;
+  height: 56px;
+}
+
+.list-item16 img {
+  margin: 0 0 -4 0;
+}
+
+.list-item16 div {
+  padding-left: 5px;
+  margin-left: 25px;
+  margin-top: -10px;
+}
+
+.list-item32 img {
+  margin: -1 0 1 0;
+}
+
+.list-item32 div {
+  padding-left: 5px;
+  margin-left: 50px;
+  margin-top: -32px;
+  height: 23px;
+  padding-top: 9px;
+  vertical-align: middle;
+}
+
+.list-item-top10 img {
+  margin: 0 0 -4 0;
+}
+
+.list-item-top10 div {
+  padding-left: 5px;
+  margin-left: 15px;
+  margin-top: -10px;
+}
+
+.icon {
+	margin: 3 6 0 0;
+	width: 16px;
+	height: 16px;
+}
+
+.pie-char-legende-big {
+  float: left;
+  margin: 3 6 0 0;
+  position: relative;
+  width: 13px;
+  height: 13px;
+  padding-top: 8px;    
+}
+
+.pie-char-legende-small {
+  float: left;
+  margin: 3 6 0 0;
+  position: relative;
+  width: 13px;
+  height: 13px;
+}
+
+.pie-char-legende-dot {
+  width: 11px;
+  height: 11px;   
+}
+
+.pie-char-legende-overlay {
+  position: absolute; top: 0px;
+  width: 13px;
+  height: 13px;  
+}
+
+.db-table-footer-link {
+  width: 100%;
+  text-align: right;
+  padding: 0 100 0 0;
+  font-size: 10px;
+}
+.db-table-footer-link a:link{
+  color: #005af0;
+}
+
+

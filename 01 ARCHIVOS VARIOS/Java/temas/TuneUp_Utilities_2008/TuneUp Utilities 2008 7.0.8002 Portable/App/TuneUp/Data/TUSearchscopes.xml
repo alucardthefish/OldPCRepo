@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<tuneup_systemcontrol>
+  <version>1</version>
+  <language>en</language>
+  
+  <searchscopes>
+  
+  	<scope name="MS Live Search">
+  		<Default>Live Search</Default>
+  		<DisplayName>@ieframe.dll,-12512</DisplayName>	
+  		<URL>http://search.live.com/ie.aspx?q={searchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>MSLiveSearch</Key>
+  		<Deletable>0</Deletable>  		
+  	</scope>
+
+  	<scope name="Google">
+  		<Default></Default>
+  		<DisplayName>Google</DisplayName>	
+  		<URL>http://www.google.com/search?hl=en&amp;q={searchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Google</Key>
+  		<Deletable>1</Deletable>
+  		<Previous>
+  		  <URL>http://www.google.com/search?hl=enq={searchTerms}</URL>	
+  		</Previous>
+  	</scope>
+  	
+  	<scope name="Wikipedia (EN)">
+  		<Default></Default>
+  		<DisplayName>Wikipedia (EN)</DisplayName>	
+  		<URL>http://en.wikipedia.org/wiki/Special:Search?search={searchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Wikipedia.org</Key>
+  		<Deletable>1</Deletable>  		
+  	</scope>
+  	
+  	<scope name="Amazon">
+  		<Default></Default>
+  		<DisplayName>Amazon</DisplayName>	
+  		<URL>http://www.amazon.com/gp/search?search-alias=aps&amp;field-keywords={searchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Amazon.com</Key>
+  		<Deletable>1</Deletable>  
+  		<Previous>
+  		  <URL>http://www.amazon.com/gp/search?search-alias=apsfield-keywords={searchTerms}</URL>
+      </Previous>		
+  	</scope>
+  
+  	<scope name="Microsoft Network">
+  		<Default></Default>
+  		<DisplayName>MSN</DisplayName>	
+  		<URL>http://search.msn.com/results.aspx?q={searchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>MicrosoftNetwork</Key>
+  		<Deletable>1</Deletable>  		
+  	</scope>
+  	
+  	<scope name="Ask.com">
+  		<Default></Default>
+  		<DisplayName>Ask.com</DisplayName>	
+  		<URL>http://www.ask.com/web?q={searchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Ask.com</Key>
+  		<Deletable>1</Deletable>  		
+  	</scope>
+  	
+  	<scope name="eBay">
+  		<Default></Default>
+  		<DisplayName>eBay</DisplayName>	
+  		<URL>http://search.ebay.com/search/search.dll?satitle={searchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>eBay.com</Key>
+  		<Deletable>1</Deletable>  		
+  	</scope>
+  	
+  	<scope name="Yahoo!">
+  		<Default></Default>
+  		<DisplayName>Yahoo!</DisplayName>	
+  		<URL>http://search.yahoo.com/search?p={searchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Yahoo.com</Key>
+  		<Deletable>1</Deletable>  		
+  	</scope>
+  	
+  	<scope name="Lycos Search">
+  		<Default></Default>
+  		<DisplayName>Lycos Search</DisplayName>	
+  		<URL>http://search.lycos.com/index.php?src=ie&amp;query={searchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Lycos.com</Key>
+  		<Deletable>1</Deletable>
+  		<Previous>
+  		  <URL>http://search.lycos.com/index.php?src=iequery={searchTerms}</URL>
+  		</Previous>  		
+  	</scope>
+  	
+  	<scope name="Altavista">
+  		<Default></Default>
+  		<DisplayName>Altavista</DisplayName>	
+  		<URL>http://www.altavista.com/web/results?itag=ody&amp;q={searchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Altavista.com</Key>
+  		<Deletable>1</Deletable>
+  		<Previous>
+  		  <URL>http://www.altavista.com/web/results?itag=odyq={searchTerms}</URL>
+      </Previous>  		
+  	</scope>
+  	
+  	<scope name="Youtube.com">
+  		<Default></Default>
+  		<DisplayName>Youtube.com</DisplayName>	
+  		<URL>http://www.youtube.com/results?search=Search&amp;search_query={SearchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Youtube.com</Key>
+  		<Deletable>1</Deletable>
+  		<Previous>
+  		  <URL>http://www.youtube.com/results?search=Searchsearch_query={SearchTerms}</URL>
+      </Previous>		  		
+  	</scope>
+  	
+  	<scope name="Google: News">
+  		<Default></Default>
+  		<DisplayName>Google: News</DisplayName>	
+  		<URL>http://news.google.com/news?hl=en&amp;q={SearchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Google.News.en</Key>
+  		<Deletable>1</Deletable> 
+  		<Previous>
+  		  <URL>http://news.google.com/news?hl=enq={SearchTerms}</URL>
+      </Previous> 		
+  	</scope>
+  	
+  	<scope name="Google: Images">
+  		<Default></Default>
+  		<DisplayName>Google: Images</DisplayName>	
+  		<URL>http://images.google.com/images?hl=en&amp;q={SearchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Google.Images.en</Key>
+  		<Deletable>1</Deletable>
+  		<Previous>
+  		  <URL>http://images.google.com/images?hl=enq={SearchTerms}</URL>
+      </Previous> 		
+  	</scope>
+  	
+  	<scope name="Google: Definition search">
+  		<Default></Default>
+  		<DisplayName>Google: Definition search</DisplayName>	
+  		<URL>http://www.google.com/search?hl=en&amp;q=define:{SearchTerms}</URL>
+  		<Codepage></Codepage>
+  		<Key>Google.Define.en</Key>
+  		<Deletable>1</Deletable> 
+  		<Previous>
+  		  <URL>http://www.google.com/search?hl=enq=define:{SearchTerms}</URL>
+      </Previous> 		
+  	</scope>
+  	
+  </searchscopes>
+</tuneup_systemcontrol>

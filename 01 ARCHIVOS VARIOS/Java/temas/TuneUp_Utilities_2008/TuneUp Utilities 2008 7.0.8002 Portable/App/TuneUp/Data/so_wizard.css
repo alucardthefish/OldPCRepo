@@ -1,0 +1,34 @@
+body             {
+                   /*CSS:uieTextParagraph*/
+                   margin: 0 0 0 0;
+                 }
+p                {
+                   /*CSS:uieTextParagraph*/
+                   margin: 0 0 0 0;
+                 }
+.cap             {
+                   font-weight: bold;
+                   margin-bottom: 2;
+                 }
+.cap a           {
+                   text-decoration: underline;
+                 }
+.desc            {
+                   color: #666666;
+                 }
+.err             {
+                   font-weight: bold;
+                   color: #FF0000;
+                   margin-left: 15;
+                 }
+.noerr           {
+                   font-weight: bold;
+                   color: #00A000;
+                   margin-left: 15;
+                 }
+a                {
+                   /*CSS:uieLinkNormal*/
+                 }
+a:hover          {
+                   /*CSS:uieLinkHover*/
+                 }

@@ -1,0 +1,10 @@
+INDEX VERSION 1.121+C:\Documents and Settings\Administrador\Escritorio\Clases Java Interactiva\.metadata\.plugins\org.eclipse.jdt.core
+2016879645.index
+2507285137.index
+4268548384.index
+1813780612.index
+917698569.index
+2945789073.index
+3955872105.index
+1513653882.index
+1578001997.index

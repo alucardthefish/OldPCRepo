@@ -1,0 +1,15 @@
+Welcome to TuneUp Shredder
+<h1>Welcome to TuneUp&nbsp;Shredder</h1>
+
+<p>TuneUp Shredder can be used to delete files and folders permanently,
+making sure the data cannot be recovered by hackers or unauthorized persons.</p>
+
+<p>When the normal Windows file delete process is used, a deleted file 
+is only marked as "deleted" in the Windows file allocation table, 
+and Windows no longer displays the file. But its contents are still present 
+on the disk and can be restored, for example with TuneUp Undelete, without problems.</p>
+
+<p>TuneUp Shredder uses a method developed by the US Department of Defense
+to ensure that files and folders are permanently removed from your hard disk, so that
+your sensitive data can no longer be recovered, even with the use of special software.</p>
+
