@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Iphone</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="../Assets/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="../Assets/bootstrap/js/jquery-1.8.3.js"></script>
+    <script src="../Scripts/audiojs/audio.min.js"></script>
+	<script src="../Scripts/XHRObjeto.js"></script>
+	
+	
+    <script>
+      $(function() {
+        // Setup the player to autoplay the next track
+        var a = audiojs.createAll({
+          trackEnded: function() {
+            var next = $('ol li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.addClass('playing').siblings().removeClass('playing');
+            audio.load($('a', next).attr('data-src'));
+            audio.play();
+          }
+        });
+        
+        // Load in the first track
+        var audio = a[0];
+            first = $('ol a').attr('data-src');
+        $('ol li').first().addClass('playing');
+        audio.load(first);
+
+        // Load in a track on click
+        $('ol li').click(function(e) {
+          e.preventDefault();
+          $(this).addClass('playing').siblings().removeClass('playing');
+          audio.load($('a', this).attr('data-src'));
+          audio.play();
+        });
+        // Keyboard shortcuts
+        $(document).keydown(function(e) {
+          var unicode = e.charCode ? e.charCode : e.keyCode;
+             // right arrow
+          if (unicode == 39) {
+            var next = $('li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.click();
+            // back arrow
+          } else if (unicode == 37) {
+            var prev = $('li.playing').prev();
+            if (!prev.length) prev = $('ol li').last();
+            prev.click();
+            // spacebar
+          } else if (unicode == 32) {
+            audio.playPause();
+          }
+        })
+      });
+	  
+	  function mostrarplaylist()
+			{
+				var objAjax = new objetoAjax();
+				
+				var opc="mostrarplaylist";
+				
+				objAjax.open("POST", "../Controlador/MostrarPlaylistsUsuarioControlador.php", true);
+				
+				objAjax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				
+				objAjax.send("opcion="+opc);
+				
+				objAjax.onreadystatechange=function()
+				{
+					if (objAjax.readyState==4)
+					{
+						document.getElementById("lista_playlist").innerHTML = objAjax.responseText;
+					}
+				}
+				
+			}
+	  
+    </script>
+  </head>
+  <body>
+	<!-- Esta es la barra que no se mueve -->
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#">Univalle Music</a>   <!-- <img alt="Univalle-Music"/> -->
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li><a href="#">Inicio</a></li>
+							<li><a href="#">Acerca</a></li>
+							<li><a href="#">Contactanos</a></li>
+						</ul>
+						<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
+					</div> <!-- .nav-collapse -->
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span3">
+					<!-- Sidebar Content -->
+					<div class="well sidebar-nav">
+						<ul class="nav nav-list">
+							<li><a href="#">Agregar Cancion</a></li>
+							<li><a href="#">Comprar Cancion</a></li>
+							<li><a href="#">Products</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="span9">
+					<!-- Body Content -->
+						
+					<div class="row-fluid">
+						<div id="wrapper">
+				  <h1 id="titulo_playlist"><em>Mis favoritos playlist</em></h1>
+				  <audio preload></audio>
+				  <ol id="lista_playlist">
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/01-dead-wrong-intro.mp3">dead wrong intro</a></li>
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/02-juicy-r.mp3">juicy-r</a></li>
+					<li><a href="#" data-src="./musica/Bacilos - Caraluna.mp3">Caraluna</a></li>
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/03-its-all-about-the-crystalizabeths.mp3">it's all about the crystalizabeths</a></li>
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/04-islands-is-the-limit.mp3">islands is the limit</a></li>
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/05-one-more-chance-for-a-heart-to-skip-a-beat.mp3">one more chance for a heart to skip a beat</a></li>
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/06-suicidal-fantasy.mp3">suicidal fantasy</a></li>
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/07-everyday-shelter.mp3">everyday shelter</a></li>
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/08-basic-hypnosis.mp3">basic hypnosis</a></li>
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/09-infinite-victory.mp3">infinite victory</a></li>
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/10-the-curious-incident-of-big-poppa-in-the-nighttime.mp3">the curious incident of big poppa in the nighttime</a></li>
+					<li><a href="#" data-src="http://s3.amazonaws.com/audiojs/11-mo-stars-mo-problems.mp3">mo stars mo problems</a></li>
+				  </ol>
+				</div>
+				
+				
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		<script src="../Assets/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
