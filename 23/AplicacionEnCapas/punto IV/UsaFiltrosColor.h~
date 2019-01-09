@@ -1,0 +1,5 @@
+#ifndef "USAFILTROSCOLOR_H"
+#define "USAFILTROSCOLOR_H"
+
+
+class UsaFiltrosColor

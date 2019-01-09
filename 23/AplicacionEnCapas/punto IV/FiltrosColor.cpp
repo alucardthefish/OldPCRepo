@@ -1,0 +1,435 @@
+#include "FiltrosColor.h"
+#include "Img.h"
+#include <iostream>
+using namespace std;
+
+
+FiltrosColor::FiltrosColor ( )
+{
+
+}
+
+//******************************************************************************
+
+FiltrosColor::~FiltrosColor() 
+{
+ 
+}
+
+//******************************************************************************
+
+
+
+double MaxColor (double r,double g,double b)
+{
+if(r>g&&r>b) r;
+else if(g>r&&g>b) g;
+else return b;
+}
+
+double Mayor (double a, double b)
+{
+
+if (a>b)a;
+else return b;
+}
+
+
+
+bool FiltrosColor::histogramaAColor ()
+{
+
+unsigned int fila=0,col=0,red=0,green=0,blue=0;
+
+Img *ptrImgOriginal = new Img(Img::P3);
+ptrImgOriginal->load("conosDER.ppm");
+
+unsigned int ancho=0;
+ancho=ptrImgOriginal->getWidth();
+unsigned int alto=0;
+alto=ptrImgOriginal->getHeight();
+unsigned int a=0;
+unsigned int b=0;
+unsigned int c=0;
+int arregloRed[256]={(0)};
+int arregloGreen[256]={(0)};
+int arregloBlue[256]={(0)};
+unsigned int SaveR=0;
+unsigned int SaveG=0;
+unsigned int SaveB=0;
+
+double MayorRojo = 0;
+double MayorVerde=0;
+double MayorAzul=0;
+double Max=0;
+Img *ptrHistoColor = new Img(Img::P3, alto, ancho);
+
+
+
+for (unsigned int fils=0; fils<ancho; fils++)
+ {
+	for (unsigned int col=0; col<alto; col++)
+	{
+	ptrHistoColor->getPixel(fils,col,a,b,c);
+	arregloRed[a]++;
+	arregloGreen[b]++;
+	arregloBlue[c]++;
+	}
+}
+
+
+for (unsigned int arregl=0; arregl<256; arregl++)
+{
+MayorRojo= Mayor(arregloRed[arregl], MayorRojo);
+}
+
+
+for (unsigned int arregl=0; arregl<256; arregl++)
+{
+MayorVerde = Mayor(arregloGreen[arregl], MayorVerde);
+}
+
+
+
+for (unsigned int arregl=0; arregl<256; arregl++)
+{
+MayorAzul = Mayor(arregloBlue[arregl], MayorAzul);
+}
+
+
+Max=MaxColor(MayorRojo, MayorVerde, MayorAzul);
+
+for (unsigned int fila=0; fila<256; fila++)
+{
+	for (unsigned int pintaH=255 - (arregloRed[fila] *(255/Max)); pintaH<256; pintaH++)
+		{
+		ptrHistoColor->setPixel(pintaH, fila, 255, 0, 0);
+		}
+	
+	for (unsigned int pintaH=255 - (arregloGreen[fila] *(255/Max)); pintaH<256; pintaH++)
+		{
+		ptrHistoColor->getPixel(pintaH, fila,SaveR, SaveG, SaveB);
+		ptrHistoColor->setPixel(pintaH, fila, SaveR, 255, 0);
+		}
+	
+	for (unsigned int pintaH=255 - (arregloBlue[fila] *(255/Max)); pintaH<256; pintaH++)
+		{
+		ptrHistoColor->getPixel(pintaH, fila,SaveR, SaveG, SaveB);
+		ptrHistoColor->setPixel(pintaH, fila, SaveR, SaveG, 255);
+		}
+}	
+
+
+ptrHistoColor->save("Histograma.ppm");
+
+}	
+
+
+//**********************************************************************************************************************//
+
+unsigned int dev (unsigned int a)
+{
+int valor = 0;
+if ((a==0)||(a%2==1)){
+	valor = a;
+	return valor;
+} else return (a-1);
+
+}
+
+
+
+
+ bool FiltrosColor::truncarAPisoImpar()
+
+{
+
+unsigned int fila=0,col=0,red=0,green=0,blue=0;
+
+
+Img * ptrImgOriginal= new Img(Img::P3);
+ptrImgOriginal->load("TEDDY_IZQ.ppm");
+int ancho= 0;
+ancho =ptrImgOriginal->getWidth();
+int alto=0;
+alto=ptrImgOriginal->getHeight();
+
+Img * ptrImgFiltrada= new Img(Img::P3, alto, ancho);
+
+ for (unsigned int fila=0; fila<alto; fila++) 
+    {
+	    for (unsigned int col=0; col<ancho; col++)
+		{
+
+
+	ptrImgOriginal->getPixel(fila,col,red, green, blue);
+	ptrImgFiltrada->setPixel(fila,col,(dev(red)), (dev(green)), (dev(blue)));
+	
+
+}	}
+
+ptrImgFiltrada->save("truncarapisoimpar.ppm");
+}
+
+
+//*************************************************************************************************************************************
+
+
+unsigned int t127 (int a)
+{
+
+int valor=0;
+if (a==0){
+valor= 0;
+}else if (a%2==0){
+valor=a/2;
+return valor;}
+else return (a-1)/2;
+
+return valor;
+}
+
+
+
+bool FiltrosColor::truncarA127 ( )
+
+{
+unsigned int fila=0,col=0,red=0,green=0,blue=0;
+
+
+Img * ptrImgOriginal= new Img(Img::P3);
+ptrImgOriginal->load("TEDDY_IZQ.ppm");
+int ancho= 0;
+ancho =ptrImgOriginal->getWidth();
+int alto=0;
+alto=ptrImgOriginal->getHeight();
+Img * ptrImgFiltrada= new Img(Img::P3, alto, ancho);
+
+ for (unsigned int fila=0; fila<alto; fila++) 
+    {
+	    for (unsigned int col=0; col<ancho; col++)
+		{
+
+
+	ptrImgOriginal->getPixel(fila,col,red, green, blue);
+	ptrImgFiltrada->setPixel(fila,col,(t127(red)), (t127(green)), (t127(blue)));
+	
+		}
+}
+ptrImgFiltrada->save("truncara127.ppm");
+
+}
+
+
+//***************************************************************************************************//
+
+
+
+
+
+bool FiltrosColor::quantizarA16 ()
+{
+unsigned int fila=0,col=0,red=0,green=0,blue=0;
+
+
+Img * ptrImgOriginal= new Img(Img::P3);
+ptrImgOriginal->load("pintorUno.ppm");
+int ancho= 0;
+ ancho =ptrImgOriginal->getWidth();
+ int alto=0;
+ alto=ptrImgOriginal->getHeight();
+
+Img * ptrImgFiltrada= new Img(Img::P3,alto,ancho);
+ptrImgFiltrada->setLevels(16);
+
+for (unsigned int fila=0; fila<alto; fila++) 
+    {
+	    for (unsigned int col=0; col<ancho; col++)
+		{
+
+
+	ptrImgOriginal->getPixel(fila,col,red,green,blue);
+	
+	ptrImgFiltrada->setPixel(fila,col,red/16, green/16, blue/16);
+	
+		}
+
+
+}
+
+	
+
+ptrImgFiltrada->save("quantizarA16.ppm");
+
+}
+
+
+//**********************************************************************************************************************//
+
+unsigned int dAbs (int a, int b)
+{
+
+int valor = 0;
+valor=fabs(a-b);
+return valor;
+
+}
+
+
+bool FiltrosColor::diferenciaAbsoluta ()
+
+{
+unsigned int fila=0,col=0,red=0,green=0,blue=0;
+unsigned int fila1=0,col1=0,red1=0,green1=0,blue1=0;
+
+
+Img * ptrImgT0= new Img(Img::P3);
+ptrImgT0->load("pintorUno.ppm");
+Img * ptrImgT1= new Img(Img::P3);
+ptrImgT1->load("pintorDos.ppm");
+int ancho= 0;
+ancho =ptrImgT0->getWidth();
+int alto=0;
+alto=ptrImgT0->getHeight();
+Img * ptrImgFiltrada= new Img(Img::P3, alto, ancho);
+
+ for (unsigned int fila=0; fila<alto; fila++) 
+    {
+	    for (unsigned int col=0; col<ancho; col++)
+		{
+
+
+	ptrImgT0->getPixel(fila,col,red,green,blue);
+	ptrImgT1->getPixel(fila1,col1,red1,green1,blue1);
+	ptrImgFiltrada->setPixel(fila,col,(dAbs(red,red1)), (dAbs(green,green1)), (dAbs(blue,blue1)));
+	
+		}
+}
+ptrImgFiltrada->save("diferenciaAbsoluta.ppm");
+
+}
+
+
+
+//********************************************************************************************************************//
+
+unsigned int dPos (int a, int b)
+{
+int valor=0;
+if (a>b){
+valor=fabs(a-b);
+} else return 0;
+return valor;
+}
+
+
+
+
+bool FiltrosColor::diferenciaPositiva ()
+
+{
+unsigned int fila=0,col=0,red=0,green=0,blue=0;
+unsigned int fila1=0,col1=0,red1=0,green1=0,blue1=0;
+
+
+Img * ptrImgT0= new Img(Img::P3);
+ptrImgT0->load("pintorUno.ppm");
+Img * ptrImgT1= new Img(Img::P3);
+ptrImgT1->load("pintorDos.ppm");
+int ancho= 0;
+ancho =ptrImgT0->getWidth();
+int alto=0;
+alto=ptrImgT0->getHeight();
+Img * ptrImgFiltrada= new Img(Img::P3, alto, ancho);
+
+ for (unsigned int fila=0; fila<alto; fila++) 
+    {
+	    for (unsigned int col=0; col<ancho; col++)
+		{
+
+
+	ptrImgT0->getPixel(fila,col,red,green,blue);
+	ptrImgT1->getPixel(fila1,col1,red1,green1,blue1);
+	ptrImgFiltrada->setPixel(fila,col,(dPos(red,red1)), (dPos(green,green1)), (dPos(blue,blue1)));
+	
+		}
+}
+ptrImgFiltrada->save("diferenciaPositiva.ppm");
+
+}
+
+
+//*********************************************************************************************************************************
+
+unsigned int dNeg (int a, int b)
+{
+int valor=0;
+if (a<b){
+valor=fabs(a-b);
+} else return 0;
+return valor;
+}
+
+
+bool FiltrosColor::diferenciaNegativa ()
+{
+
+unsigned int fila=0,col=0,red=0,green=0,blue=0;
+unsigned int fila1=0,col1=0,red1=0,green1=0,blue1=0;
+
+
+Img * ptrImgT0= new Img(Img::P3);
+ptrImgT0->load("pintorUno.ppm");
+Img * ptrImgT1= new Img(Img::P3);
+ptrImgT1->load("pintorDos.ppm");
+int ancho= 0;
+ancho =ptrImgT0->getWidth();
+int alto=0;
+alto=ptrImgT0->getHeight();
+Img * ptrImgFiltrada= new Img(Img::P3, alto, ancho);
+
+ for (unsigned int fila=0; fila<alto; fila++) 
+    {
+	    for (unsigned int col=0; col<ancho; col++)
+		{
+
+
+	ptrImgT0->getPixel(fila,col,red,green,blue);
+	ptrImgT1->getPixel(fila1,col1,red1,green1,blue1);
+	ptrImgFiltrada->setPixel(fila,col,(dNeg(red,red1)), (dNeg(green,green1)), (dNeg(blue,blue1)));
+	
+		}
+}
+ptrImgFiltrada->save("diferenciaNegativa.ppm");
+
+}
+
+
+//***************************************************************************************************************************//
+
+//unsigned int contador ()
+
+//unsigned int getContador () const
+
+
+//***************************************************************************************************************************//
+
+int main ()
+
+{
+
+
+truncarAPisoImpar();
+truncarA127();
+quantizarA16();
+diferenciaAbsoluta();
+diferenciaPositiva();
+diferenciaNegativa();
+histogramaAColor();
+return 0;
+
+
+}
+
+
+
