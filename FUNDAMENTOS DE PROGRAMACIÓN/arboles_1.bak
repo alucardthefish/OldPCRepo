@@ -1,0 +1,92 @@
+
+; Estructura que representa un arbol binario ordenado (ABO)
+(define-struct abo (valor ramaizq ramader))
+
+; Esta funcion busca un elemento 'num' en un arbol binario 'arbol'
+; retornando true si encuentra 'num' en 'arbol', y false en caso contrario
+; buscar-en-abo : abo numero -> bool
+(define (buscar-en-abo arbol num)
+  (cond
+    ((empty? arbol) false)
+    ((= (abo-valor arbol) num) true)
+    ((> num (abo-valor arbol)) (buscar-en-abo (abo-ramader arbol) num))
+    (else (buscar-en-abo (abo-ramaizq arbol) num))
+    ))
+
+(define abo1
+   (make-abo 10 (make-abo 5 (make-abo 2 null null) (make-abo 6 null null))
+             (make-abo 11 (make-abo 10.5 null null) (make-abo 100 null null)))
+  )
+
+;(buscar-en-abo abo1 10)
+
+
+; Esta funcion inserta un valor 'num' en un abo
+; insertar-en-abo : abo numero -> abo
+
+(define (insertar-en-abo arbol num)
+  (cond
+    ((null? arbol) (make-abo num null null))
+    ((<= num (abo-valor arbol)) (make-abo (abo-valor arbol) 
+                                          (insertar-en-abo (abo-ramaizq arbol) num)
+                                          (abo-ramader arbol)))
+    (else (make-abo (abo-valor arbol)
+                    (abo-ramaizq arbol)
+                    (insertar-en-abo (abo-ramader arbol) num)))
+    ))
+
+
+(insertar-en-abo
+  (insertar-en-abo
+    (insertar-en-abo null 10)
+    9)
+80)
+
+(insertar-en-abo
+(insertar-en-abo
+  (insertar-en-abo
+   (insertar-en-abo
+      (insertar-en-abo null 10)
+      5)
+  6)
+  7)
+6)
+
+;(define a1 (insertar-en-abo null 10))
+;(define a2 (insertar-en-abo a1 9))
+;(define a3 (insertar-en-abo a2 7))
+
+(define (insertar-lista-en-abo arbol lista)
+  (cond
+    ((empty? lista) arbol)
+    ( else (insertar-lista-en-abo (insertar-en-abo arbol (first lista)) (rest lista))
+    )))
+    
+(insertar-lista-en-abo abo1'(10 9 7))
+
+
+; Estructura que representa un arbol binario ordenado (ABO)
+(define-struct abo (valor ramaizq ramader))
+
+; Esta funcion busca un elemento 'num' en un arbol binario 'arbol'
+; retornando true si encuentra 'num' en 'arbol', y false en caso contrario
+; buscar-en-abo : abo numero -> bool
+(define (buscar-en-abo arbol num)
+  (cond
+    ((empty? arbol) false)
+    ((= (abo-valor arbol) num) true)
+    ((> num (abo-valor arbol)) (buscar-en-abo (abo-ramader arbol) num))
+    (else (buscar-en-abo (abo-ramaizq arbol) num))
+    ))
+
+(define abo1
+   (make-abo 10 (make-abo 5 (make-abo 2 null null) (make-abo 6 null null))
+             (make-abo 11 (make-abo 10.5 null null) (make-abo 100 null null)))
+  )
+
+(buscar-en-abo abo1 1)
+( 1 2 3 4 )
+
+; Esta funcion
+
+

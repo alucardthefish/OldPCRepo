@@ -1,0 +1,33 @@
+#|
+ Esta funcion calcula la sumatoria de un numero pasado como parametro (N)
+ La sumatoria de un numero N esta definida como la suma de todos los numeros que estan entre 0 y N (inclusive),
+ por ejemplo, la sumatoria de 5 seria 5+4+3+2+1+0.
+ Por tanto puede definirse a la sumatoria de N como una funcion recursiva:
+    La sumatoria de N es 0 si N=0
+    La sumatoria de N es el resultado de N + la sumatoria de N-1, cuando N!=0 (N diferente de 0)
+ Para explicar mejor esta ultima definicion podriamos escribir:
+    Si N=0, entonces:  sumatoria(N) = 0
+    Si N!=0, entonces: sumatoria(N) = N+sumatoria(N-1)
+ Para mostrar un ejemplo mas didactico, mostremos como calculariamos la sumatoria de 5:
+    sumatoria(5) = 5 + sumatoria(4)
+    Pero como sumatoria(4) = 4 + sumatoria(3) entonces:
+    sumatoria(5) = 5 + 4 + sumatoria(3)
+    Pero como sumatoria(3) = 3 + sumatoria(2) entonces:
+    sumatoria(5) = 5 + 4 + 3 + sumatoria(2)
+    Pero como sumatoria(2) = 2 + sumatoria(1) entonces:
+    sumatoria(5) = 5 + 4 + 3+ 2 + sumatoria(1)
+    Pero como sumatoria(1) = 1 + sumatoria(0) entonces:
+    sumatoria(5) = 5 + 4 + 3+ 2 + 1 + sumatoria(0)
+    Y como sumatoria(0) = 0 entonces nos queda:
+    sumatoria(5) = 5 + 4 + 3+ 2 + 1 + 0
+|#
+;; Contrato: sumatoria : numero-positivo -> numero
+(define (sumatoria N)
+  (if (= N 0)
+      0
+      (+ N (sumatoria (- N 1)))
+      ))
+      
+;; Pruebas:
+(sumatoria 5) ; Debe devolver 15
+(sumatoria 0) ; Debe devolver 0

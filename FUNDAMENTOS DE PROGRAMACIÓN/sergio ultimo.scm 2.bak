@@ -1,0 +1,19 @@
+(define-struct humano1 (nombre sexo tiposangre))
+(define Andrea (make-humano "Andrea Gomez" 'F 'O))
+(define Camilo (make-humano1 "Camilo Diaz" 'M 'O))
+(define Genny (make-humano "Genny Lopez" 'F 'A))
+(define Diana (make-humano "Diana Maria Santacruz" 'F 'AB))
+(define Jairo (make-humano1 "Jairo Perez" 'M 'B))
+
+
+ 
+(define(tiposangre-hijo humano1 humano2)
+  (cond
+    ((and(= (caddr(humano1))'O)(= (caddr(humano2))'O))'O)
+    ((and(= (caddr(humano1))'O)(= (caddr(humano2))'B))'B)
+    ((and(= (caddr(humano1))'O)(= (caddr(humano2))'AB))'AB)
+    ((and(= (caddr(humano1))'O)(= (caddr(humano2))'A))'A)
+    ((and(= (caddr(humano1))'A)(= (caddr(humano2))'B))'AB)
+    (else 'no tienen hijo)
+    ))
+    

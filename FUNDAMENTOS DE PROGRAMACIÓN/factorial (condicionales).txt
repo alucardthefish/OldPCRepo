@@ -1,0 +1,27 @@
+;; Esta funcion calcula el factorial de un numero pasado como parametro (N)
+#|
+ El factorial de un numero N esta definido como la multiplicacion de todos los numeros que estan entre 1 y N (inclusive),
+ por ejemplo, el factorial de 5 seria 5*4*3*2*1
+ Por tanto puede definirse a el factorial de N como una funcion recursiva:
+    El factorial de N es 1 si N=1
+    El factorial de N es el resultado de N * el factorial de N-1, cuando N!=0 (N diferente de 0)
+ Para explicar mejor esta ultima definicion podriamos escribir:
+    Si N=1, entonces:  factorial(N) = 1
+    Si N!=10, entonces: factorial(N) = N * factorial(N-1)
+ Para mostrar un ejemplo mas didactico, mostremos como calculariamos el factorial de 3:
+    factorial(3) = 3 * factorial(2)
+    Pero como factorial(2) = 2 * factorial(1) entonces:
+    factorial(3) = 3 * 2 * factorial(1)
+    Pero como factorial(1) = 1 entonces:
+    factorial(3) = 3 * 2 * 1
+|#
+;; Contrato: factorial : numero-positivo -> numero
+(define (factorial N)
+  (if (or (= N 0) (= N 1))
+      1
+      (* N (factorial (- N 1)))
+      ))
+      
+;; Pruebas:
+(factorial 5) ; Debe devolver 120
+(factorial 0) ; Debe devolver 1

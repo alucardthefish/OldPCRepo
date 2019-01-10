@@ -1,0 +1,12 @@
+(define (mayor A B C)
+  (cond
+    ((= A B C) "son iguales")
+    ((and (> A B) (> A C)) A)
+    ((and (> A B) (<= A C)) C)
+    ((and (<= A B) (> B C)) B)
+    (else C)
+    ))
+
+(mayor 5 5 5)
+(mayor 34 34 5)
+(mayor 314 40 5)

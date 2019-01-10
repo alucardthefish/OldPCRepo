@@ -1,0 +1,16 @@
+
+;(define (positivo-negativo-neutro A)
+;  (if (= A 0)
+;      "C"
+;      (if (> A 0) "P" "N")))
+
+(define (positivo-negativo-neutro A)
+  (cond
+    ((= A 0) "C")
+    ((> A 0) "P")
+    (else "N")
+    ))
+
+(positivo-negativo-neutro -12)
+(positivo-negativo-neutro 0)
+(positivo-negativo-neutro 12)
