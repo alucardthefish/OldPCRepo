@@ -1,0 +1,13 @@
+Al descomprimir el archivo se encontraran  los siguientes 
+documentos:
+
+•	Carpeta Akari: contiene el proyecto de la aplicación creado en  NetBeans.
+	 Dentro de ella se encuentran las clases .java  ubicadas  en src.
+	 Recomendamos abrir el proyecto mediante   NetBeans.
+         EJECUTAR LA CLASE main.java
+
+
+•	Documentos de entrada: TableroEjemplo.txt
+•	Akari.pdf: informe de proyecto
+•	Archivo  leeeme.txt
+•	Manual de usuario
