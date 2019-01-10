@@ -1,0 +1,13 @@
+Homo Sapiens	1	Hombre moderno
+Raton			1	(Mus Musculus)
+Primate			1	(Pan Troglodyte) Chimpance
+Ave				1	(Gallus gallus) Gallina
+Anfibio			1	(Xenopus laevis) Rana Africana
+Reptile			1	(Crotalus adamanteus) Serpiente Cascabel
+Pez				1	(Danio rerio) Pez Cebra
+Hormiga			1	(Lasius Niger) Hormiga
+Mosca			1	(Drosophila melanogaster) Mosca de fruta
+Molusco			0
+Gusano			1	(Echinococcus granulosus) Gusano Tenia de perro
+Bacteria		1	(Escherichia coli)
+

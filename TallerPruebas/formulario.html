@@ -1,0 +1,344 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Registro Viajes De Pasajeros</title>
+		<link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" media="all" href="jsDatePick_ltr.min.css" />
+		<script type="text/javascript" src="jsDatePick.min.1.3.js"></script>
+		<script src="./XHRObjeto.js"></script>
+		<style type="text/css">
+			h1 {
+				text-align:center;
+				font-family: 'Rambla', sans-serif;
+				font-weight: 400;
+			}
+			.formulario {
+				padding: 10px;
+				border: 1px solid;
+				width: 20%;
+				float: left;
+				margin: 5px;
+			}
+			.result {
+				width: 73%;
+				height: auto;
+				border: 1px solid;
+				display: block;
+				float: left;
+				margin: 5px;
+				padding: 10px;
+			}
+			.usuario {
+				width: 15%;
+				height: auto;
+				float: left;
+			}
+			.fecha {
+				width: 15%;
+				height: auto;
+				float: left;
+			}
+			.hora {
+				width: 15%;
+				height: auto;
+				float: left;
+			}
+			.sta_origen {
+				width: 15%;
+				height: auto;
+				float: left;
+			}
+			.sta_destino {
+				width: 15%;
+				height: auto;
+				float: left;
+			}
+			.select {
+				width: 25%;
+				height: auto;
+				float: left;
+			}
+			.record {
+				overflow:auto; 
+				padding-top:1px; 
+				padding-bottom:1px; 
+				margin-top:2px; 
+				border: 1px solid; 
+				width:auto; 
+				height:auto;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				new JsDatePick({
+					useMode:2,
+					target:"fechas"
+				});
+			};
+			
+			function darclick(usuarioid, fecha, hora, minutos, estacion1, estacion2)
+			{
+				//alert("usuario id ok");
+				//Parte de usuario id
+				var valorusuario = usuarioid;
+				//alert("valorusuario = "+valorusuario);
+				var objuser = document.getElementById("opciones_usuario_id");
+				//alert("objuser = exito");
+				var indiceusuario=0;
+				while(objuser.options[indiceusuario].value != valorusuario)
+				{
+					indiceusuario++;
+				}
+				//alert("sale del while con indiceusuario = "+indiceusuario);
+				//aqui con el inidice
+				objuser.options[indiceusuario].selected = true;
+				
+				
+				
+				//Parte de Fecha
+				var valorfecha = fecha;
+				document.getElementById("fechas").value = valorfecha;			
+				
+				
+				//Parte de hora
+				var valorhora = hora;
+				var objhora = document.getElementById("opciones_hora_in");
+				var indicehora=0;
+				while(objhora.options[indicehora].value != valorhora)
+				{
+					indicehora++;
+				}
+				//aqui con el inidice
+				objhora.options[indicehora].selected = true;
+				
+				
+				//Parte de minutos
+				var valormin = minutos;
+				var objmin = document.getElementById("opciones_minutos_in");
+				var indicemin=0;
+				while(objmin.options[indicemin].value != valormin)
+				{
+					indicemin++;
+				}
+				//aqui con el inidice
+				objmin.options[indicemin].selected = true;
+				
+				
+				//Parte de estacion origen
+				var valorsta1 = estacion1;
+				var obj = document.getElementById("estacion_origen");
+				var indice=0;
+				while(obj.options[indice].value != valorsta1)
+				{
+					indice++;
+				}
+				//aqui con el inidice
+				obj.options[indice].selected = true;
+				
+				//Parte de estacion destino
+				var valorsta2 = estacion2;
+				var obj2 = document.getElementById("estacion_destino");
+				var indice2=0;
+				while(obj2.options[indice2].value != valorsta2)
+				{
+					indice2++;
+				}
+				//aqui con el inidice
+				obj2.options[indice2].selected = true;
+				
+			}
+			
+			function guardar()
+			{
+				var objAjax = new objetoAjax();
+				
+				var accion="registrar";
+				
+				var listaidusuario = document.getElementById("opciones_usuario_id");
+				var indiceSeleccionado = listaidusuario.selectedIndex;
+				var opcionSeleccionada = listaidusuario.options[indiceSeleccionado];
+				
+				//Valor obtenido del id usuario
+				var valorIdUsuario = opcionSeleccionada.value;
+				
+				//Valor de el campo fecha
+				var fecha = document.getElementById("fechas").value;
+				
+				var listaHoras = document.getElementById("opciones_usuario_id");
+				var indiceSeleccionado2 = listaHoras.selectedIndex;
+				var opcionSeleccionada2 = listaHoras.options[indiceSeleccionado2];
+				
+				//Valor obtenido de la hora
+				var valorHoras = opcionSeleccionada2.value;
+				
+				
+				var listaMinutos = document.getElementById("opciones_usuario_id");
+				var indiceSeleccionado3 = listaMinutos.selectedIndex;
+				var opcionSeleccionada3 = listaMinutos.options[indiceSeleccionado3];
+				
+				//Valor obtenido de los minutos
+				var valorMinutos = opcionSeleccionada3.value;
+				
+				
+				var listaEstacion1 = document.getElementById("opciones_usuario_id");
+				var indiceSeleccionado4 = listaEstacion1.selectedIndex;
+				var opcionSeleccionada4 = listaEstacion1.options[indiceSeleccionado4];
+				
+				//Valor obtenido de estacion origen
+				var valorEstacion1 = opcionSeleccionada4.value;
+				
+				
+				var listaEstacion2 = document.getElementById("opciones_usuario_id");
+				var indiceSeleccionado5 = listaEstacion2.selectedIndex;
+				var opcionSeleccionada5 = listaEstacion2.options[indiceSeleccionado5];
+				
+				//Valor obtenido de estacion destino
+				var valorEstacion2 = opcionSeleccionada5.value;
+				
+				
+				objAjax.open("POST", ".controlador.php", true);
+				
+				objAjax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				
+				objAjax.send("accion="+accion+"&idusuario="+valorIdUsuario+"&fecha="+fecha+"&hora="+valorHoras+"&minutos="+valorMinutos+"&estacion1="+valorEstacion1+"&estacion2="+valorEstacion2);
+				
+				objAjax.onreadystatechange=function()
+				{
+					if (objAjax.readyState==4)
+					{
+						//Aqui voy a generar los divs que muestran los registros
+						document.getElementById("mostrar").innerHTML = objAjax.responseText;
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Registro de abordaje de pasajeros</h1>
+		</header>
+		<div class="formulario">
+			<form>
+				<fieldset>
+					<legend>Registro</legend>
+					<label>Id del usuario</label><br />
+					<select id="opciones_usuario_id">
+						<option value="user001">USER001</option>
+						<option value="user002">USER002</option>
+						<option value="user003">USER003</option>
+						<option value="user004">USER004</option>
+						<option value="user005">USER005</option>
+						<option value="user006">USER006</option>
+						<option value="user007">USER007</option>
+						<option value="user008">USER008</option>
+						<option value="user009">USER009</option>
+						<option value="user010">USER010</option>
+					</select><br /><br />
+					<label>Fecha entrada estacion</label><br />
+					<input type="text" id="fechas" /><br /><br />
+					<label>Hora entrada estacion</label><br />
+					<select id="opciones_hora_in">
+						<option value="00">00 Horas</option>
+						<option value="01">01 Horas</option>
+						<option value="02">02 Horas</option>
+						<option value="03">03 Horas</option>
+						<option value="04">04 Horas</option>
+						<option value="05">05 Horas</option>
+						<option value="06">06 Horas</option>
+						<option value="07">07 Horas</option>
+						<option value="08">08 Horas</option>
+						<option value="09">09 Horas</option>
+						<option value="10">10 Horas</option>
+						<option value="11">11 Horas</option>
+						<option value="12">12 Horas</option>
+						<option value="13">13 Horas</option>
+						<option value="14">14 Horas</option>
+						<option value="15">15 Horas</option>
+						<option value="16">16 Horas</option>
+						<option value="17">17 Horas</option>
+						<option value="18">18 Horas</option>
+						<option value="19">19 Horas</option>
+						<option value="20">20 Horas</option>
+						<option value="21">21 Horas</option>
+						<option value="22">22 Horas</option>
+						<option value="23">23 Horas</option>
+					</select><br /><br />
+					<label>Minutos entrada estacion</label><br />
+					<select id="opciones_minutos_in">
+						<option value="00">00 Minutos</option>
+						<option value="05">05 Minutos</option>
+						<option value="10">10 Minutos</option>
+						<option value="15">15 Minutos</option>
+						<option value="20">20 Minutos</option>
+						<option value="25">25 Minutos</option>
+						<option value="30">30 Minutos</option>
+						<option value="35">35 Minutos</option>
+						<option value="40">40 Minutos</option>
+						<option value="45">45 Minutos</option>
+						<option value="50">50 Minutos</option>
+						<option value="55">55 Minutos</option>
+					</select><br /><br />
+					<label>Estacion de origen</label><br />
+					<select id="estacion_origen">
+						<option value="sta001">Chiminangos</option>
+						<option value="sta002">Flora Industrial</option>
+						<option value="sta003">Chapinero</option>
+						<option value="sta004">Belalcazar</option>
+						<option value="sta005">Plaza Caycedo</option>
+						<option value="sta006">Centro</option>
+						<option value="sta007">Santa Librada</option>
+						<option value="sta008">Universidades</option>
+						<option value="sta009">Vipasa</option>
+						<option value="sta010">Versalles</option>
+						<option value="sta011">Nuevo Latir</option>
+						<option value="sta012">Villanueva</option>
+					</select><br /><br />
+					<label>Estacion destino</label><br />
+					<select id="estacion_destino">
+						<option value="sta001">Chiminangos</option>
+						<option value="sta002">Flora Industrial</option>
+						<option value="sta003">Chapinero</option>
+						<option value="sta004">Belalcazar</option>
+						<option value="sta005">Plaza Caycedo</option>
+						<option value="sta006">Centro</option>
+						<option value="sta007">Santa Librada</option>
+						<option value="sta008">Universidades</option>
+						<option value="sta009">Vipasa</option>
+						<option value="sta010">Versalles</option>
+						<option value="sta011">Nuevo Latir</option>
+						<option value="sta012">Villanueva</option>
+					</select><br /><br />
+					<input type="hidden" id="id_reg" />
+				</fieldset>
+			</form>
+			<button>Guardar</button> <button>Borrar</button>
+		</div>
+			
+		<div class="result">
+			<div class="record">
+				<div class="usuario"><strong>Usuario: </strong>user003</div>
+				<div class="fecha"><strong>Fecha: </strong>05/22/2012</div>
+				<div class="hora"><strong>Hora: </strong>08:25</div>
+				<div class="sta_origen"><strong>Estacion origen: </strong>Chiminangos</div>
+				<div class="sta_destino"><strong>Estacion destino: </strong>Centro</div>
+				<div class="select"><button onclick="darclick('user003', '05/22/2012', '08', '25', 'sta001', 'sta006');">Seleccionar</button></div>
+			</div>
+			<div class="record">
+				<div class="usuario"><strong>Usuario: </strong>user004</div>
+				<div class="fecha"><strong>Fecha: </strong>07/12/2012</div>
+				<div class="hora"><strong>Hora: </strong>16:35</div>
+				<div class="sta_origen"><strong>Estacion origen: </strong>Chapinero</div>
+				<div class="sta_destino"><strong>Estacion destino: </strong>Villanueva</div>
+				<div class="select"><button onclick="darclick('user004', '07/12/2012', '16', '35', 'sta003', 'sta012');">Seleccionar</button></div>
+			</div>
+			<div style="margin-top:2px; border: 1px solid; width:auto; height:30px;">
+				
+			</div>
+			<div style="margin-top:2px; border: 1px solid; width:auto; height:30px;">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>
