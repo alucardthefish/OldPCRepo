@@ -1,0 +1,27 @@
+Ya he logrado instalar Symfony con el proyecto de la pagina oficial Jobeet.
+
+En el navegador se encuentra en: http://localhost:8082
+
+
+C:\AppServ\Apache2.2
+
+Ubicacion del proyecto y Symfony:
+
+C:\development\sfprojects\jobeet
+pararme en esta ubicacion desd cmd
+
+HE MODIFICADO EL ARCHIVO httpd.conf en la ultima parte para agregar el proyecto Symfony.
+
+SQLSTATE[HY000]: General error: 1289 The 'InnoDB' feature is disabled; you need MySQL built with 'InnoDB' to have it working.
+
+El error anterior se corrigio modificando el archivo my.ini de C:\AppServ\MySQL\my.ini reemplazando la linea de codigo:
+skip-innodb por comentarlo
+# skip-innodb
+
+SQLSTATE[HY000]: General error: 1005 Can't create table
+
+MAÑANA PROSEGUIRE CON EL DIA NUMERO 7 DEL PROYECTO EN LA PARTE: "Creación del Módulo Category"
+
+Symfony2 libro escritorio 72 -> El directorio web
+
+Libro Symfony2 segundo pagina --> 31

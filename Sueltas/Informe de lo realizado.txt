@@ -1,0 +1,31 @@
+Siempre donde se añada el navbar de los usuarios logueados debe de incrustarse el script que crea el objeto ajax 
+XmlHttpRequest XHRObjeto.js de la carpeta /Scripts y justo despues de esta, se debe incrustar el script que maneja 
+el loggin y logout del usuario manejaSesion.js.
+
+La version actual en la casa se esta manejando en:
+C:\wamp\www\WWWProject\Univalle_Music\
+
+Archivos modificados:
+
+LoginRegistro.php                 Es la vista para registrar usuarios y loguearlos
+navLogueados.php:               Es la barra de navegacion que se mostrara a los usuario logueados
+indes.php:                            Es el archivo principal donde se registran o se loguean los usuarios, se debe cambiar a index su nombre.
+footer.php:                            Es el pie de pagina de la aplicacion que va en todas las paginas
+subircanciones.php:              Es la vista desde donde se sube al servidor las canciones que los clientes suben.
+manejaSesion.js:                  Es el script que maneja el envio de peticiones al servidor en cuanto a login y logout.
+MostrarCancionUsuario.php:  Es el archivo encargado de manejar todas las peticion referentes a visualizar las canciones de los usuarios.
+LoginControlador.php:           Es el archivo que se encarga de recibir los datos de logueo mandado por funciones en manejaSesion.js para iniciar sesion si todos
+                                           todos los datos son validados correctamente.
+CancionUsuarioControlador.php: Es el archivo encargado de recibir el archivo subido guardarlo en su carpeta correspondiente de usuario y su registro en bd
+
+Habilitar:
+php_pdo_pgsql
+php_pgsql
+
+luego copiar el archivo:
+libpq.dll
+de: 
+C:\wamp\bin\php\php5.4.3
+
+a:
+C:\wamp\bin\apache\apache2.2.22\bin
