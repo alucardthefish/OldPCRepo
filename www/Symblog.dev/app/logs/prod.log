@@ -1,0 +1,4 @@
+[2013-05-20 05:45:31] request.INFO: Matched route "BloggerBlogBundle_homepage" (parameters: "_controller": "Blogger\BlogBundle\Controller\PageController::indexAction", "_route": "BloggerBlogBundle_homepage") [] []
+[2013-05-20 05:45:34] request.CRITICAL: Doctrine\ORM\ORMException: Unknown Entity namespace alias 'BloggerBlogBundle'. (uncaught exception) at C:\wamp\www\Symblog.dev\vendor\doctrine\orm\lib\Doctrine\ORM\ORMException.php line 148 [] []
+[2013-05-20 06:47:18] request.INFO: Matched route "BloggerBlogBundle_homepage" (parameters: "_controller": "Blogger\BlogBundle\Controller\PageController::indexAction", "_route": "BloggerBlogBundle_homepage") [] []
+[2013-05-20 06:47:18] request.CRITICAL: Doctrine\ORM\ORMException: Unknown Entity namespace alias 'BloggerBlogBundle'. (uncaught exception) at C:\wamp\www\Symblog.dev\vendor\doctrine\orm\lib\Doctrine\ORM\ORMException.php line 148 [] []

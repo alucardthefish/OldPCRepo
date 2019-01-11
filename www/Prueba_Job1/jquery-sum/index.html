@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Ejemplo de sumar dos campos</title>
+    <script type='text/javascript' src='jquery-1.7.1.min.js'></script>
+    <style type='text/css'>
+        input   {text-align:right;border-color:#808080;}
+        .text   {clear:both;float:left;width:80px;}
+        .input  {float:left;}
+        #total  {color:#000;}
+    </style>
+</head>
+
+<body>
+    <h1>Sumar dos numeros con jquery</h1>
+    <div id='suma'>
+        <div class='text'>Numero 1</div><div class='input'><input type='text' name='valor1' id='valor1'></div>
+        <div class='text'>Numero 2</div><div class='input'><input type='text' name='valor2' id='valor2'></div>
+        <div class='text'>Total</div><div class='input'><input type='text' name='total' id='total' disabled='disabled'></div>
+    </div>
+    
+    <script type='text/javascript'>
+        // Cada vez que se pulse una tecla, controlamos que sea numerica
+        $("#suma input").keypress(function(event) {
+            //obtenemos la tecla pulsada
+            var valueKey=String.fromCharCode(event.which);
+            //obtenemos el valor ascii de la tecla pulsada
+            var keycode=event.which;
+            
+            // Si NO pulsamos un numero, un punto, la tecla suprimir
+            // la tecla backspace o el simobolo "-" (45), cancelamos la pulsacion
+            if(valueKey.search('[0-9|\.]')!=0 && keycode!=8 && keycode!=46 && keycode!=45)
+            {
+                // anulamos la pulsacion de la tecla
+                return false;
+            }
+        });
+        
+        // evento que se ejecuta cada vez que se suelte la tecla en cualquiera de
+        // los tres inputs
+        $("#suma input").keyup(function(event) {
+            calcular();
+        });
+        
+        // Calculamos la suma de los dos valores
+        function calcular()
+        {
+            var valor1=validarNumero('#valor1');
+            var valor2=validarNumero('#valor2');
+            
+            $("#total").val(valor1+valor2);
+        }
+        
+        // Funcion para validar que el numero sea correcto, y para cambiar el color
+        // del marco en caso de error
+        function validarNumero(id)
+        {
+            if($.isNumeric($(id).val()))
+            {
+                $(id).css('border-color','#808080');
+                return parseFloat($(id).val());
+            }else if($(id).val()==""){
+                $(id).css('border-color','#808080');
+                return 0;
+            }else{
+                $(id).css('border-color','#f00');
+                return 0;
+            }
+        }
+    </script>
+</body>
+</html>

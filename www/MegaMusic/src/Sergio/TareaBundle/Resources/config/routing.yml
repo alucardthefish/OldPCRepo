@@ -1,0 +1,7 @@
+sergio_tarea_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: SergioTareaBundle:Default:index }
+
+tarea_nueva:
+    pattern:  /Formulario
+    defaults:  { _controller: SergioTareaBundle:Default:nueva }

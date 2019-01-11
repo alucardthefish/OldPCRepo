@@ -1,0 +1,7 @@
+parameters:
+#    sergio_tarea.example.class: Sergio\TareaBundle\Example
+
+services:
+#    sergio_tarea.example:
+#        class: %sergio_tarea.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

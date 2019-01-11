@@ -1,0 +1,132 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<title>Facturacion</title>
+		<script>
+			var listaDeArticulos;
+			var cantidadArticulos = 0;
+			
+			var camposAgregadosOriginales = "<br /><label>Cantidad: </label><input type=\"text\" name=\"cantidad"+cantidadArticulos+"\"></input> <label>Articulo: </label><select id=\"sel"+cantidadArticulos+"\"></select> <button id=\"rmItem"+cantidadArticulos+"\">Quitar compra</button>";
+			
+			$(document).ready(function(){
+				
+				$.post("paginaservidor.php",
+				{
+					peticion:"articulos"
+				},
+				function(data){
+					listaDeArticulos = data;
+					//document.getElementById("tablademuestra").innerHTML = listaDeArticulos;
+				});
+				
+				$("#addItem").click(function(){
+					cantidadArticulos++;
+					$("#lista_compras").append("<div><label>Cantidad: </label><input type=\"text\" class=\"cantidad\" name=\"cantidad[]\"></input> <label>Articulo: </label><select class=\"sel\" name=\"sel[]\">"+listaDeArticulos+"</select> <label>Sub-total:</label> <input type=\"text\" disabled=\"disabled\" class=\"stotal\" value=0></input> <button class=\"quitar\" >Quitar compra</button><br /><br /></div>");
+				});
+				
+				
+				$("#lista_compras").delegate(".quitar", "click", function(){
+					var padre = $(this).parent();
+					padre.remove();
+					sumaTotal();
+				});
+				
+				
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<header>
+				<nav>
+					<ul>
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Nosotros</a></li>
+						<li><a href="#">Acerca de</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+		<div>
+			<h3>Formulario para agregar items a la factura</h3>
+
+			<button id="addItem">Agregar compra</button>
+			<br /><br />
+			<form>				
+				<label>ID del cliente</label>
+				<input type="text" name="id_cliente"></input>
+				
+				<br />
+				<br />
+				
+				<div id="lista_compras">
+					
+				</div>
+				
+				<button type="submit">Cargar Factura</button>
+				
+			</form>
+			<label>Suma total:</label> <input type="text" disabled="disabled" class="total" value=0></input>
+		</div>
+		<script type="text/javascript">
+			
+			$("div").delegate(".cantidad", "keypress", function(event){
+			
+				//obtenemos la tecla pulsada
+				var valueKey=String.fromCharCode(event.which);
+				//obtenemos el valor ascii de la tecla pulsada
+				var keycode=event.which;
+				
+				// Si NO pulsamos un numero, un punto, la tecla suprimir
+				// la tecla backspace o el simobolo "-" (45), cancelamos la pulsacion
+				if(valueKey.search('[0-9|\.]')!=0 && keycode!=8 && keycode!=46 && keycode!=45)
+				{
+					// anulamos la pulsacion de la tecla
+					return false;
+				}
+			});
+			
+			function sumaTotal()
+			{
+				var re;
+				var valor = 0;
+				
+				$("#lista_compras").find(".stotal").each(function(){
+					re = $(this).val();
+					valor += parseInt(re);
+				});
+				
+				$(".total").val(valor);
+			}
+			
+			$("div").delegate(".cantidad", "keyup", function(event){
+				
+				var cantidad = $(this).val();
+				//alert("la cantidad: "+cantidad);
+				var hermanoPrecio = $(this).siblings(".sel").find("option:selected").data("precio");
+				//selecciono al hermano precio que es el que esta dentro del mismo div para calcular el sub total
+				//alert("el precio: "+hermanoPrecio);
+				$(this).siblings(".stotal").val(cantidad*hermanoPrecio);
+				
+				sumaTotal();
+				
+			});
+			
+			$("div").delegate(".sel", "change", function(){
+				
+				var cantidad = $(this).siblings(".cantidad").val();
+				//alert("la cantidad : "+cantidad);
+				var hermanoPrecio = $(this).find("option:selected").data("precio");
+				//selecciono al hermano precio que es el que esta dentro del mismo div para calcular el sub total
+				//alert("el precio: "+hermanoPrecio);
+				$(this).siblings(".stotal").val(cantidad*hermanoPrecio);
+				
+				sumaTotal();
+				
+			});
+			
+		</script>
+	</body>
+</html>

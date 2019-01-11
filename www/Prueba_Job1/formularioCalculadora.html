@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>Calculadora</TITLE>
+<SCRIPT>
+<!--
+var total = 0
+var UltimaOperacion = "+"
+var NuevoNumero = true
+
+function IntroduceNumero(Digito) {
+    var Formu = Digito.form
+    if (NuevoNumero) {
+        BorraNumero(Formu)
+        NuevoNumero = false
+    }
+    Formu.display.value = Formu.display.value + Digito.name
+}
+
+function Limpiar(Formu) {
+    total = 0
+    UltimaOperacion = "+"
+    Formu.display.value = ""
+}
+
+function BorraNumero(Formu) {
+    Formu.display.value = ""
+}
+
+function Calcula(Operacion) {
+    var Formu = Operacion.form
+    var Expresion = total + UltimaOperacion + Formu.display.value
+    UltimaOperacion = Operacion.value
+    total = eval(Expresion)
+    Formu.display.value = total
+    NuevoNumero = true
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM>
+<TABLE BORDER=1>
+<TR><TD COLSPAN=4><INPUT TYPE=text NAME=display VALUE="" onFocus="this.blur();"></TD></TR>
+<TR>
+<TD><INPUT TYPE=button NAME="7" VALUE=" 7 " onClick="IntroduceNumero(this);"></TD> <TD><INPUT TYPE=button NAME="8" VALUE=" 8 " onClick="IntroduceNumero(this);"></TD>
+<TD><INPUT TYPE=button NAME="9" VALUE=" 9 " onClick="IntroduceNumero(this);"></TD>
+<TD><INPUT TYPE=button NAME="+" VALUE=" + " onClick="Calcula(this);"></TD></TR><TR> <TD><INPUT TYPE=button NAME="4" VALUE=" 4 " onClick="IntroduceNumero(this);"></TD>
+<TD><INPUT TYPE=button NAME="5" VALUE=" 5 " onClick="IntroduceNumero(this);"></TD>
+<TD><INPUT TYPE=button NAME="6" VALUE=" 6 " onClick="IntroduceNumero(this);"></TD>
+<TD><INPUT TYPE=button NAME="-" VALUE=" - " onClick="Calcula(this);"></TD>
+</TR>
+<TR>
+<TD><INPUT TYPE=button NAME="1" VALUE=" 1 " onClick="IntroduceNumero(this);"></TD>
+<TD><INPUT TYPE=button NAME="2" VALUE=" 2 " onClick="IntroduceNumero(this);"></TD>
+<TD><INPUT TYPE=button NAME="3" VALUE=" 3 " onClick="IntroduceNumero(this);"></TD>
+<TD><INPUT TYPE=button NAME="*" VALUE=" * " onClick="Calcula(this);"></TD></TR><TR> <TD><INPUT TYPE=button NAME="0" VALUE=" 0 " onClick="IntroduceNumero(this);"></TD>
+<TD><INPUT TYPE=button NAME="C" VALUE=" C " onClick="Limpiar(this.form);"></TD>
+<TD><INPUT TYPE=button NAME="CE" VALUE="CE" onClick="BorraNumero(this.form);"></TD>
+<TD><INPUT TYPE=button NAME="/" VALUE=" / " onClick="Calcula(this);"></TD>
+</TR>
+</TABLE>
+</FORM>
+</BODY>
+</HTML> 

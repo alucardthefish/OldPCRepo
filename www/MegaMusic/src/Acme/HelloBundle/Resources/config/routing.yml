@@ -1,0 +1,7 @@
+acme_hello_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: AcmeHelloBundle:Hello:index }
+
+acme_hello_exit:
+    pattern:  /exit/{name}
+    defaults: { _controller: AcmeHelloBundle:Exit:salir }
