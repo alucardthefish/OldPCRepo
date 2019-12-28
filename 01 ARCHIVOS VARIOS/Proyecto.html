@@ -1,0 +1,209 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Proyecto</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Proyecto</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/workspace/Proyecto/Proyecto.py">/home/ubuntu/workspace/Proyecto/Proyecto.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;Sergio&nbsp;Ortiz&nbsp;Paz&nbsp;-&nbsp;1526478<br>
+#&nbsp;Diego&nbsp;A.&nbsp;Borrero&nbsp;-&nbsp;1629069<br>
+#&nbsp;Fabian&nbsp;A.&nbsp;Montaño-&nbsp;1510364</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="Proyecto.html#Maestro">Maestro</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Proyecto.html#Simulador">Simulador</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Maestro">class <strong>Maestro</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Maestro-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Maestro-analisisAlgoritmoProb"><strong>analisisAlgoritmoProb</strong></a>(self, numMuestras, numRepeticiones)</dt><dd><tt>Soluciona&nbsp;un&nbsp;tablero&nbsp;de&nbsp;8&nbsp;reinas&nbsp;de&nbsp;manera&nbsp;probabilistica&nbsp;"numMuestras"&nbsp;veces&nbsp;para&nbsp;calcular&nbsp;el&nbsp;tiempo&nbsp;promedio<br>
+donde&nbsp;luego&nbsp;le&nbsp;saca&nbsp;el&nbsp;promedio&nbsp;del&nbsp;promedio&nbsp;del&nbsp;tiempo,&nbsp;ademas&nbsp;calcula&nbsp;el&nbsp;tiempo&nbsp;determinista<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;lista&nbsp;donde&nbsp;el&nbsp;primer&nbsp;elemento&nbsp;muestra&nbsp;el&nbsp;promedio&nbsp;de&nbsp;tiempos&nbsp;promedios&nbsp;del&nbsp;algoritmo&nbsp;probabilistico&nbsp;y&nbsp;el<br>
+segundo&nbsp;es&nbsp;el&nbsp;tiempo&nbsp;de&nbsp;solucion&nbsp;del&nbsp;deterministico<br>
+&nbsp;<br>
+Parametros:<br>
+numMuestras:&nbsp;cantida&nbsp;de&nbsp;ejecuciones&nbsp;resolviendo&nbsp;el&nbsp;algoritmo&nbsp;probabilistico<br>
+numRepeticiones:&nbsp;numero&nbsp;de&nbsp;veces&nbsp;que&nbsp;se&nbsp;repite&nbsp;la&nbsp;muestra&nbsp;de&nbsp;probabilisticos</tt></dd></dl>
+
+<dl><dt><a name="Maestro-analisisHipotesis"><strong>analisisHipotesis</strong></a>(self, numMuestras)</dt><dd><tt>Resuelve&nbsp;secuencialmente&nbsp;varias&nbsp;muestras&nbsp;incrementales&nbsp;de&nbsp;100&nbsp;en&nbsp;100&nbsp;hasta&nbsp;un&nbsp;numero&nbsp;numMuestras&nbsp;para<br>
+observar&nbsp;si&nbsp;la&nbsp;probabilidad&nbsp;de&nbsp;exito&nbsp;(p)&nbsp;y&nbsp;el&nbsp;promedio&nbsp;de&nbsp;posiciones&nbsp;exploradas&nbsp;en&nbsp;fracaso&nbsp;(f)&nbsp;se&nbsp;acercan&nbsp;o&nbsp;tienden<br>
+la&nbsp;hipotesis&nbsp;planteada&nbsp;en&nbsp;clase&nbsp;donde&nbsp;p&nbsp;=&nbsp;0.1294&nbsp;y&nbsp;f&nbsp;=&nbsp;6.971<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;matriz&nbsp;donde&nbsp;por&nbsp;cada&nbsp;fila&nbsp;representa&nbsp;la&nbsp;primer&nbsp;columna&nbsp;la&nbsp;cantidad&nbsp;de&nbsp;muestras&nbsp;tomadas,&nbsp;la&nbsp;segunda<br>
+columna&nbsp;(p)&nbsp;y&nbsp;la&nbsp;tercera&nbsp;(f)<br>
+&nbsp;<br>
+Parametros:<br>
+numMuestras:&nbsp;Cantidad&nbsp;maxima&nbsp;posible&nbsp;de&nbsp;muestras&nbsp;de&nbsp;ejecucion&nbsp;del&nbsp;algoritmo&nbsp;probabilistico</tt></dd></dl>
+
+<dl><dt><a name="Maestro-checkDiagonal"><strong>checkDiagonal</strong></a>(self, col, lista, n, tipo<font color="#909090">=135</font>)</dt><dd><tt>Verifica&nbsp;si&nbsp;la&nbsp;diagonal&nbsp;45&nbsp;o&nbsp;135&nbsp;de&nbsp;una&nbsp;columna&nbsp;no&nbsp;tiene&nbsp;reinas&nbsp;atacando<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;variable&nbsp;booleana&nbsp;indicando&nbsp;True&nbsp;si&nbsp;la&nbsp;diagonal&nbsp;esta<br>
+libre&nbsp;y&nbsp;False&nbsp;si&nbsp;la&nbsp;diagonal&nbsp;esta&nbsp;siendo&nbsp;atacada&nbsp;por&nbsp;otra&nbsp;reina<br>
+&nbsp;<br>
+Parametros:<br>
+col:&nbsp;columna&nbsp;a&nbsp;verificar<br>
+lista:&nbsp;lista&nbsp;de&nbsp;numeros&nbsp;de&nbsp;columnas&nbsp;donde&nbsp;cada&nbsp;posicion&nbsp;determina&nbsp;la&nbsp;fila&nbsp;del&nbsp;tablero&nbsp;de&nbsp;ajedrez<br>
+n:&nbsp;dimension&nbsp;del&nbsp;tablero<br>
+tipo:&nbsp;especifica&nbsp;que&nbsp;diagonal&nbsp;verificar.&nbsp;La&nbsp;diagonal&nbsp;135&nbsp;esta&nbsp;por&nbsp;default&nbsp;sino&nbsp;es&nbsp;especificada&nbsp;(la&nbsp;diagonal<br>
+esta&nbsp;determinada&nbsp;como&nbsp;en&nbsp;un&nbsp;plano&nbsp;cartesiano&nbsp;no&nbsp;como&nbsp;en&nbsp;las&nbsp;diapositivas&nbsp;de&nbsp;clase.&nbsp;Es&nbsp;decir&nbsp;invertidas)</tt></dd></dl>
+
+<dl><dt><a name="Maestro-columnasValidas"><strong>columnasValidas</strong></a>(self, solucion, n)</dt><dd><tt>Calcula&nbsp;las&nbsp;posibles&nbsp;columnas&nbsp;factibles&nbsp;de&nbsp;una&nbsp;fila&nbsp;de&nbsp;acuerdo&nbsp;a&nbsp;una&nbsp;lista&nbsp;o&nbsp;vector&nbsp;solucion&nbsp;del&nbsp;tablero<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;lista&nbsp;donde&nbsp;los&nbsp;valores&nbsp;representan&nbsp;las&nbsp;columnas&nbsp;factibles&nbsp;para&nbsp;poner&nbsp;una&nbsp;reina,&nbsp;devuelve&nbsp;la&nbsp;lista&nbsp;vacia<br>
+si&nbsp;todas&nbsp;las&nbsp;columnas&nbsp;estan&nbsp;siendo&nbsp;amenazadas&nbsp;por&nbsp;reinas<br>
+&nbsp;<br>
+Parametros:<br>
+solucion:&nbsp;Lista&nbsp;de&nbsp;solucion&nbsp;actual&nbsp;del&nbsp;tablero<br>
+n:&nbsp;dimension&nbsp;del&nbsp;tablero,&nbsp;solo&nbsp;para&nbsp;tableros&nbsp;de&nbsp;dimensiones&nbsp;mayores&nbsp;a&nbsp;3&nbsp;hay&nbsp;solucion</tt></dd></dl>
+
+<dl><dt><a name="Maestro-nReinas"><strong>nReinas</strong></a>(self, n)</dt><dd><tt>Hace&nbsp;uso&nbsp;del&nbsp;metodo&nbsp;nReinasDeterminista&nbsp;para&nbsp;encontrar&nbsp;una&nbsp;solucion&nbsp;por&nbsp;busqueda&nbsp;por&nbsp;amplitud<br>
+solo&nbsp;pasandole&nbsp;las&nbsp;dimensiones&nbsp;del&nbsp;tablero&nbsp;n<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;lista&nbsp;almacenando&nbsp;la&nbsp;solucion&nbsp;al&nbsp;tablero&nbsp;de&nbsp;n&nbsp;reinas.&nbsp;Donde&nbsp;cada<br>
+posicion&nbsp;de&nbsp;la&nbsp;lista&nbsp;representa&nbsp;filas&nbsp;y&nbsp;el&nbsp;valor&nbsp;almacenado&nbsp;en&nbsp;esa&nbsp;posicion&nbsp;la<br>
+columna&nbsp;donde&nbsp;se&nbsp;ubica&nbsp;una&nbsp;reina<br>
+&nbsp;<br>
+Parametros:<br>
+n:&nbsp;dimension&nbsp;del&nbsp;tablero,&nbsp;solo&nbsp;para&nbsp;tableros&nbsp;de&nbsp;dimensiones&nbsp;mayores&nbsp;a&nbsp;3&nbsp;hay&nbsp;solucion</tt></dd></dl>
+
+<dl><dt><a name="Maestro-nReinasDeterminista"><strong>nReinasDeterminista</strong></a>(self, fila, n, solucion, t)</dt><dd><tt>Encuentra&nbsp;una&nbsp;solucion&nbsp;al&nbsp;problema&nbsp;de&nbsp;las&nbsp;n&nbsp;reinas&nbsp;a&nbsp;traves&nbsp;de&nbsp;una&nbsp;busqueda&nbsp;por&nbsp;profundidad<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;lista&nbsp;donde&nbsp;el&nbsp;primer&nbsp;elemento&nbsp;es&nbsp;un&nbsp;booleano&nbsp;que&nbsp;indica&nbsp;si&nbsp;tuvo&nbsp;exito&nbsp;encontrando&nbsp;una&nbsp;solucion<br>
+(este&nbsp;es&nbsp;utilizado&nbsp;como&nbsp;parada&nbsp;de&nbsp;recursion).&nbsp;El&nbsp;segundo&nbsp;elemento&nbsp;muestra&nbsp;la&nbsp;lista&nbsp;de&nbsp;solucion&nbsp;encontrada<br>
+&nbsp;<br>
+Parametros:<br>
+fila:&nbsp;representa&nbsp;un&nbsp;flag&nbsp;que&nbsp;denota&nbsp;en&nbsp;que&nbsp;fila&nbsp;se&nbsp;esta&nbsp;almacenando&nbsp;la&nbsp;columna<br>
+n:&nbsp;dimension&nbsp;del&nbsp;tablero,&nbsp;solo&nbsp;para&nbsp;tableros&nbsp;de&nbsp;dimensiones&nbsp;mayores&nbsp;a&nbsp;3&nbsp;hay&nbsp;solucion<br>
+solucion:&nbsp;lista&nbsp;donde&nbsp;se&nbsp;va&nbsp;almacenando&nbsp;la&nbsp;solucion<br>
+t:&nbsp;almacena&nbsp;el&nbsp;tiempo&nbsp;de&nbsp;ejecucion&nbsp;del&nbsp;algoritmo&nbsp;como&nbsp;unidades&nbsp;de&nbsp;iteracion</tt></dd></dl>
+
+<dl><dt><a name="Maestro-nReinasLVSolver"><strong>nReinasLVSolver</strong></a>(self, n)</dt><dd><tt>Repite&nbsp;el&nbsp;algoritmo&nbsp;de&nbsp;las&nbsp;vegas&nbsp;nReinasLasVegas&nbsp;hasta&nbsp;encontrar&nbsp;solucion<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;lista&nbsp;done&nbsp;el&nbsp;primer&nbsp;elemento&nbsp;es&nbsp;una&nbsp;lista&nbsp;almacenando&nbsp;la&nbsp;solucion&nbsp;al&nbsp;tablero&nbsp;de&nbsp;n&nbsp;reinas.&nbsp;Donde&nbsp;cada<br>
+posicion&nbsp;de&nbsp;la&nbsp;lista&nbsp;representa&nbsp;filas&nbsp;y&nbsp;el&nbsp;valor&nbsp;almacenado&nbsp;en&nbsp;esa&nbsp;posicion&nbsp;la&nbsp;columna&nbsp;donde&nbsp;se&nbsp;ubica&nbsp;una&nbsp;reina.&nbsp;<br>
+El&nbsp;segundo&nbsp;elemento&nbsp;es&nbsp;el&nbsp;tiempo&nbsp;que&nbsp;le&nbsp;tomo&nbsp;al&nbsp;algoritmo&nbsp;encontrar&nbsp;solucion<br>
+&nbsp;<br>
+Parametros:<br>
+n:&nbsp;dimension&nbsp;del&nbsp;tablero,&nbsp;solo&nbsp;para&nbsp;tableros&nbsp;de&nbsp;dimensiones&nbsp;mayores&nbsp;a&nbsp;3&nbsp;hay&nbsp;solucion</tt></dd></dl>
+
+<dl><dt><a name="Maestro-nReinasLasVegas"><strong>nReinasLasVegas</strong></a>(self, n)</dt><dd><tt>Busca&nbsp;aleatoriamente&nbsp;una&nbsp;solucion&nbsp;en&nbsp;un&nbsp;tablero&nbsp;n&nbsp;x&nbsp;n<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;lista&nbsp;donde&nbsp;el&nbsp;primer&nbsp;elemento&nbsp;es&nbsp;una&nbsp;variable&nbsp;booleana&nbsp;que&nbsp;denota&nbsp;con&nbsp;True<br>
+si&nbsp;hubo&nbsp;exito&nbsp;encontrando&nbsp;la&nbsp;solucion&nbsp;o&nbsp;False&nbsp;en&nbsp;caso&nbsp;contrario.&nbsp;El&nbsp;segundo&nbsp;elemento&nbsp;de&nbsp;la<br>
+lista&nbsp;es&nbsp;la&nbsp;solucion&nbsp;parcial&nbsp;encontrada&nbsp;antes&nbsp;de&nbsp;fallar&nbsp;o&nbsp;toda&nbsp;la&nbsp;solucion&nbsp;en&nbsp;el&nbsp;caso&nbsp;de&nbsp;exito.<br>
+El&nbsp;tercer&nbsp;elmento&nbsp;representa&nbsp;la&nbsp;unidad&nbsp;de&nbsp;tiempo&nbsp;como&nbsp;iteracion&nbsp;del&nbsp;programa<br>
+&nbsp;<br>
+Parametros:<br>
+n:&nbsp;dimension&nbsp;del&nbsp;tablero,&nbsp;solo&nbsp;para&nbsp;tableros&nbsp;de&nbsp;dimensiones&nbsp;mayores&nbsp;a&nbsp;3&nbsp;hay&nbsp;solucion</tt></dd></dl>
+
+<dl><dt><a name="Maestro-validar"><strong>validar</strong></a>(self, col, solucion, n)</dt><dd><tt>Valida&nbsp;la&nbsp;posicion&nbsp;de&nbsp;una&nbsp;reina&nbsp;de&nbsp;acuerdo&nbsp;a&nbsp;como&nbsp;va&nbsp;el&nbsp;tablero&nbsp;solucion&nbsp;hasta&nbsp;el&nbsp;momento<br>
+&nbsp;<br>
+Devuelve&nbsp;True&nbsp;si&nbsp;la&nbsp;posicion&nbsp;no&nbsp;esta&nbsp;siendo&nbsp;atacada&nbsp;por&nbsp;ninguna&nbsp;reina<br>
+&nbsp;<br>
+Parametros:<br>
+col:&nbsp;columna&nbsp;a&nbsp;verificar<br>
+solucion:&nbsp;lista&nbsp;de&nbsp;numeros&nbsp;de&nbsp;columnas&nbsp;donde&nbsp;cada&nbsp;posicion&nbsp;determina&nbsp;la&nbsp;fila&nbsp;del&nbsp;tablero&nbsp;de&nbsp;ajedrez<br>
+n:&nbsp;dimension&nbsp;del&nbsp;tablero,&nbsp;solo&nbsp;para&nbsp;tableros&nbsp;de&nbsp;dimensiones&nbsp;mayores&nbsp;a&nbsp;3&nbsp;hay&nbsp;solucion</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Simulador">class <strong>Simulador</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Simulador-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Simulador-actualizarCola"><strong>actualizarCola</strong></a>(self, tLlegada, listaSalidas)</dt><dd><tt>actualiza&nbsp;la&nbsp;cola&nbsp;del&nbsp;sistema&nbsp;discreto&nbsp;cuando&nbsp;llega&nbsp;un&nbsp;retador<br>
+&nbsp;<br>
+Devuelve&nbsp;el&nbsp;tamaño&nbsp;de&nbsp;la&nbsp;cola&nbsp;dado&nbsp;un&nbsp;tiempo&nbsp;de&nbsp;llegada&nbsp;y&nbsp;un&nbsp;listado&nbsp;de&nbsp;tiempos&nbsp;de&nbsp;salidas<br>
+&nbsp;<br>
+Parametros:<br>
+tLlegada:&nbsp;tiempo&nbsp;cronologico&nbsp;en&nbsp;el&nbsp;que&nbsp;llega&nbsp;un&nbsp;retador<br>
+listaSalidas:&nbsp;lista&nbsp;de&nbsp;tiempos&nbsp;de&nbsp;salidas&nbsp;de&nbsp;retadores&nbsp;anteriores</tt></dd></dl>
+
+<dl><dt><a name="Simulador-analisisComportamientoCola"><strong>analisisComportamientoCola</strong></a>(self, n, retadores, desviacion, tiempo, arrayRepeticiones)</dt><dd><tt>Calcula&nbsp;el&nbsp;promedio&nbsp;de&nbsp;colas&nbsp;maximas&nbsp;para&nbsp;un&nbsp;tiempo&nbsp;dado&nbsp;entre&nbsp;llegadas&nbsp;<br>
+con&nbsp;una&nbsp;desviacion&nbsp;parametrizada&nbsp;y&nbsp;un&nbsp;numero&nbsp;de&nbsp;repeticiones&nbsp;dado&nbsp;para&nbsp;una&nbsp;cantidad&nbsp;de&nbsp;retadores&nbsp;especificados<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;matriz&nbsp;donde&nbsp;en&nbsp;cada&nbsp;fila&nbsp;la&nbsp;primer&nbsp;columna&nbsp;representa&nbsp;la&nbsp;cantidad&nbsp;de&nbsp;repeticiones&nbsp;que&nbsp;se&nbsp;evaluan&nbsp;y&nbsp;en&nbsp;la<br>
+segunda&nbsp;columna&nbsp;el&nbsp;promedio&nbsp;de&nbsp;cola&nbsp;maxima&nbsp;para&nbsp;el&nbsp;tiempo&nbsp;parametrizado<br>
+&nbsp;<br>
+Parametros:<br>
+n:&nbsp;cantidad&nbsp;de&nbsp;reinas&nbsp;en&nbsp;un&nbsp;tablero&nbsp;n&nbsp;x&nbsp;n<br>
+retadores:&nbsp;cantidad&nbsp;de&nbsp;personas&nbsp;que&nbsp;retan&nbsp;al&nbsp;maestro<br>
+desviacion:&nbsp;desviacion&nbsp;de&nbsp;los&nbsp;tiempos&nbsp;que&nbsp;evaluara<br>
+tiempo:&nbsp;tiempo&nbsp;base<br>
+numRepeticiones:&nbsp;cantidad&nbsp;de&nbsp;veces&nbsp;que&nbsp;el&nbsp;maestro&nbsp;atendera&nbsp;a&nbsp;los&nbsp;retadores&nbsp;para&nbsp;un&nbsp;tiempo&nbsp;dado.</tt></dd></dl>
+
+<dl><dt><a name="Simulador-analisisDeTiempoVsCola"><strong>analisisDeTiempoVsCola</strong></a>(self, n, retadores, desviacion, tiempoI, tiempoF, numRepeticiones)</dt><dd><tt>Calcula&nbsp;el&nbsp;promedio&nbsp;de&nbsp;colas&nbsp;maximas&nbsp;para&nbsp;diferentes&nbsp;tiempos&nbsp;entre&nbsp;llegadas&nbsp;en&nbsp;un&nbsp;intervalo&nbsp;entre<br>
+tiempoI&nbsp;y&nbsp;tiempoF&nbsp;con&nbsp;una&nbsp;desviacion&nbsp;parametrizada&nbsp;y&nbsp;un&nbsp;numero&nbsp;de&nbsp;repeticiones&nbsp;dado&nbsp;para&nbsp;una&nbsp;cantidad&nbsp;de&nbsp;retadores&nbsp;especificado<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;matriz&nbsp;donde&nbsp;en&nbsp;cada&nbsp;fila&nbsp;la&nbsp;primer&nbsp;columna&nbsp;representa&nbsp;el&nbsp;tiempo&nbsp;que&nbsp;se&nbsp;evalua&nbsp;y&nbsp;en&nbsp;la<br>
+segunda&nbsp;columna&nbsp;el&nbsp;promedio&nbsp;de&nbsp;cola&nbsp;maxima&nbsp;para&nbsp;dicho&nbsp;tiempo<br>
+&nbsp;<br>
+Parametros:<br>
+n:&nbsp;cantidad&nbsp;de&nbsp;reinas&nbsp;en&nbsp;un&nbsp;tablero&nbsp;n&nbsp;x&nbsp;n<br>
+retadores:&nbsp;cantidad&nbsp;de&nbsp;personas&nbsp;que&nbsp;retan&nbsp;al&nbsp;maestro<br>
+desviacion:&nbsp;desviacion&nbsp;de&nbsp;los&nbsp;tiempos&nbsp;que&nbsp;evaluara<br>
+tiempoI:&nbsp;tiempo&nbsp;inicial<br>
+tiempoF:&nbsp;tiempo&nbsp;final<br>
+numRepeticiones:&nbsp;cantidad&nbsp;de&nbsp;veces&nbsp;que&nbsp;el&nbsp;maestro&nbsp;atendera&nbsp;a&nbsp;los&nbsp;retadores&nbsp;por&nbsp;cada&nbsp;tiempo.</tt></dd></dl>
+
+<dl><dt><a name="Simulador-empezar"><strong>empezar</strong></a>(self, retadores, n, tiempo, desviacion, mostrarTabla<font color="#909090">=False</font>)</dt><dd><tt>Da&nbsp;inicio&nbsp;a&nbsp;la&nbsp;simulacion&nbsp;del&nbsp;sistema&nbsp;discreto<br>
+&nbsp;<br>
+Devuelve&nbsp;las&nbsp;variables&nbsp;de&nbsp;desempeno&nbsp;cola&nbsp;promedio&nbsp;y&nbsp;cola&nbsp;maxima<br>
+&nbsp;<br>
+Parametros:<br>
+retadores:&nbsp;cantidad&nbsp;de&nbsp;retadores&nbsp;que&nbsp;tendra&nbsp;el&nbsp;sistema<br>
+n:&nbsp;cantidad&nbsp;de&nbsp;reinas&nbsp;a&nbsp;disponer&nbsp;en&nbsp;un&nbsp;tablero&nbsp;n&nbsp;x&nbsp;n<br>
+tiempo:&nbsp;tiempo&nbsp;base&nbsp;parametrizado<br>
+desviacion:&nbsp;desviacion&nbsp;del&nbsp;tiempo&nbsp;base<br>
+mostrarTabla:&nbsp;variable&nbsp;booleana&nbsp;que&nbsp;de&nbsp;ser&nbsp;True&nbsp;imprime&nbsp;en&nbsp;pantalla&nbsp;la&nbsp;tabla&nbsp;de&nbsp;la&nbsp;simulacion.&nbsp;(opcional&nbsp;default&nbsp;es&nbsp;False)</tt></dd></dl>
+
+<dl><dt><a name="Simulador-generarTiempoEntreLLegada"><strong>generarTiempoEntreLLegada</strong></a>(self, tiempo, desviacion)</dt><dd><tt>Genera&nbsp;un&nbsp;tiempo&nbsp;entre&nbsp;llegada&nbsp;dado&nbsp;un&nbsp;tiempo&nbsp;y&nbsp;una&nbsp;desviacion&nbsp;del&nbsp;mismo.&nbsp;Es&nbsp;decir&nbsp;que&nbsp;para&nbsp;un&nbsp;tiempo&nbsp;t&nbsp;y&nbsp;una<br>
+desviacion&nbsp;d,&nbsp;el&nbsp;tiempo&nbsp;generado&nbsp;pseudoaleatoriamente&nbsp;entre&nbsp;[t-d,&nbsp;t+d]<br>
+&nbsp;<br>
+Devuelve&nbsp;una&nbsp;unidad&nbsp;de&nbsp;tiempo&nbsp;pseudoaleatorio&nbsp;t&nbsp;+-&nbsp;d<br>
+&nbsp;<br>
+Parametros:<br>
+tiempo:&nbsp;tiempo&nbsp;base&nbsp;parametrizado<br>
+desviacion:&nbsp;desviacion&nbsp;del&nbsp;tiempo&nbsp;base</tt></dd></dl>
+
+<dl><dt><a name="Simulador-generarTiempoSolucion"><strong>generarTiempoSolucion</strong></a>(self, n)</dt><dd><tt>Genera&nbsp;el&nbsp;tiempo&nbsp;que&nbsp;se&nbsp;demora&nbsp;el&nbsp;maestro&nbsp;resolviendo&nbsp;el&nbsp;problema&nbsp;de&nbsp;n&nbsp;reinas,&nbsp;decidiendo&nbsp;aleatoriamente&nbsp;si<br>
+resolverlo&nbsp;deterministicamente&nbsp;o&nbsp;probabilisticamente<br>
+&nbsp;<br>
+Devuelve&nbsp;unidades&nbsp;de&nbsp;tiempo&nbsp;de&nbsp;la&nbsp;ejecucion&nbsp;del&nbsp;problema<br>
+&nbsp;<br>
+Parametros:<br>
+n:&nbsp;cantidad&nbsp;de&nbsp;reinas&nbsp;a&nbsp;posicionar&nbsp;en&nbsp;un&nbsp;tablero&nbsp;n&nbsp;x&nbsp;n</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
